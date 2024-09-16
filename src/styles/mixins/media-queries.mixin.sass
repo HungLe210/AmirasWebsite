@@ -1,0 +1,53 @@
+$sml-screen-width-xs: 575px
+$sml-screen-width-sm: 576px
+$sml-screen-width-md: 768px
+$sml-screen-width-lg: 992px
+$sml-screen-width-xl: 1200px
+$sml-screen-width-xxl: 1400px
+
+@mixin sml-media-xs
+  @media screen and (max-width: $sml-screen-width-xs)
+    @content
+
+@mixin sml-media-sm
+  @media screen and (min-width: $sml-screen-width-sm)
+    @content
+
+@mixin sml-media-md
+  @media screen and (min-width: $sml-screen-width-md)
+    @content
+
+@mixin sml-media-lg
+  @media screen and (min-width: $sml-screen-width-lg)
+    @content
+
+@mixin sml-media-xl
+  @media screen and (min-width: $sml-screen-width-xl)
+    @content
+
+@mixin sml-media-xxl
+  @media screen and (min-width: $sml-screen-width-xxl)
+    @content
+
+// Samples:
+
+// @import '../mixins/mixins.sass'
+// .sml-media-queries-sample
+//     width: 100%
+//     @include sml-media-sm 
+//         background-color: blueviolet
+//         color: white
+// 
+//          div 
+//            color: red
+//          
+//     
+//     @include sml-media-md 
+//         background-color:beige
+//         color: black
+// 
+//          div 
+//            color: blue
+//          
+//     
+// 

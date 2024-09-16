@@ -1,0 +1,10 @@
+# Folders
+src/core
+
+# Files
+*.svg
+*.json
+*.log
+*.d.ts
+*.md
+*.lock

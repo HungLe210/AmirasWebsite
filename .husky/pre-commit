@@ -1,0 +1,5 @@
+#!/bin/bash
+
+yarn pre-commit-check
+# Add other commands (e.g., tests)
+exit $?

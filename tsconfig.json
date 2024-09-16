@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@configs": ["./configs/index"],
+      "@configs/*": ["./configs/*"],
+
+      "@constants": ["./constants/index"],
+      "@constants/*": ["./constants/*"],
+
+      "@contexts": ["./contexts/index"],
+      "@contexts/*": ["./contexts/*"],
+
+      "@core": ["./core/index"],
+      "@core/*": ["./core/*"],
+
+      "@enums": ["./enums/index"],
+      "@enums/*": ["./enums/*"],
+
+      "@helpers": ["./helpers/index"],
+      "@helpers/*": ["./helpers/*"],
+
+      "@hooks": ["./hooks/index"],
+      "@hooks/*": ["./hooks/*"],
+
+      "@layouts": ["./layouts/index"],
+      "@layouts/*": ["./layouts/*"],
+
+      "@services": ["./services/index"],
+      "@services/*": ["./services/*"],
+
+      "@shared-components": ["./shared-components/index"],
+      "@shared-components/*": ["./shared-components/*"],
+      
+      "@styles/*": ["./styles/*"],
+
+      "@types": ["./types/index"],
+      "@types/*": ["./types/*"],
+    }
+  },
+  "include": [
+    "next-env.d.ts", 
+    "**/*.ts", 
+    "**/*.tsx", 
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
