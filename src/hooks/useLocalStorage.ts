@@ -1,15 +1,27 @@
-import { useEffect, useState } from 'react';
+/* eslint-disable no-unused-vars */
+import { useCallback, useEffect, useState } from 'react';
 
-export function useLocalStorage<T>(key: string, fallbackValue: T) {
-    const [value, setValue] = useState(fallbackValue);
-    useEffect(() => {
-        const stored = localStorage.getItem(key);
-        setValue(stored ? JSON.parse(stored) : fallbackValue);
-    }, [fallbackValue, key]);
+export function useLocalStorage<V>(
+	key: string,
+	fallbackValue?: V,
+): [V | null, (newValue: V | null) => void] {
+	const [value, setValue] = useState<V | null>(fallbackValue || null);
 
-    useEffect(() => {
-        localStorage.setItem(key, JSON.stringify(value));
-    }, [key, value]);
+	const changeValue = useCallback(
+		(newValue: V | null) => {
+			setValue(newValue);
+			localStorage.setItem(key, JSON.stringify(newValue));
+		},
+		[key, setValue],
+	);
 
-    return [value, setValue] as const;
+	useEffect(() => {
+		try {
+			setValue(JSON.parse(localStorage.getItem(key) || 'null'));
+		} catch (err) {
+			setValue(fallbackValue || null);
+		}
+	}, [key, fallbackValue]);
+
+	return [value, changeValue];
 }

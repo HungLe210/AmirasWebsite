@@ -1,11 +1,19 @@
 'use client';
 
-import { AuthContext } from './context';
+import { SampleContext } from './context';
 
-type AuthProviderProps = {
+type SampleProviderProps = {
 	children: React.ReactNode;
 };
 
-export function AuthProvider({ children }: AuthProviderProps) {
-	return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;
+export function SampleProvider({ children }: SampleProviderProps) {
+	return (
+		<SampleContext.Provider
+			value={{
+				text: '',
+			}}
+		>
+			{children}
+		</SampleContext.Provider>
+	);
 }

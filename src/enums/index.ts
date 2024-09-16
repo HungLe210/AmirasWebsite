@@ -1,1 +1,1 @@
-export * from './sample.enum';
+export * from './auth-state.enum';

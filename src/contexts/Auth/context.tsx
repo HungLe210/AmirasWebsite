@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
-type AuthContextFields = {
-	state?: string;
+type SampleContextFields = {
+	text?: string;
 };
 
-export const AuthContext = createContext<AuthContextFields>({});
+export const SampleContext = createContext<SampleContextFields>({});
