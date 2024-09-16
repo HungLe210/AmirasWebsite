@@ -1,8 +1,9 @@
-import { BaseLayout } from '@layouts/BaseLayout';
-import Footer from '@shared-components/Footer/Footer';
+import { Footer } from '@shared-components';
+
 import Header from '@shared-components/Header/Header';
 import Newsletter from '@shared-components/Newsletter/Newsletter';
-import "./globals.css";
+import '@styles/globals.sass';
+import '@styles/color.sass';
 
 export const metadata = {
 	title: 'Next.js',
@@ -11,14 +12,13 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en">
-			<body suppressHydrationWarning className='main-layout'>
 
+		<html lang='en'>
+			<body suppressHydrationWarning className='main-layout'>
 				<Header />
 				{children}
 				<Newsletter />
 				<Footer />
-
 			</body>
 		</html>
 	);

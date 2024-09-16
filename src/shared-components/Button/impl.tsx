@@ -1,9 +1,8 @@
-import React from "react"
-import "./styles.css"
-import { ButtonProps } from "./types"
+import React from 'react';
+import './styles.sass';
+import { ButtonProps } from './types';
 
-export const Button = ({ children }: ButtonProps) => {
-    return (
-        <button className="btn">{children}</button>
-    )
-}
+export const Button = ({ children }: ButtonProps) => (
+    <button className='btn'>{children}</button>
+);
+
