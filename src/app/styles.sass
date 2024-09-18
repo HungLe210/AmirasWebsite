@@ -1,30 +1,90 @@
 
 .banner
   display: flex
-  width: 98%
-  justify-content: flex-end
+  width: 100%
   align-items: center
   color: var(--primary-color)
 
-.banner-left
-  flex: 1
-  display: flex
-  align-items: flex-end
-  flex-direction: column
-  gap: 10px
-  color: var(--primary)
+  &-left
+    width: 30%
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    gap: 10px
+    color: var(--primary)
 
-  h4
-    color: black
+    h4
+      color: black
 
 .banner-right
+  width: 70%
   flex: 2
 
-  img
-    width: 100%
+// @media screen and (max-width: 1024px)
+//   .header
+//     width: 99%
 
-@media screen and (max-width: 1024px)
-  .header
-    width: 99%
+.bg
 
-$color: #ffff
+  background-repeat: no-repeat
+  transition: transform .3s ease
+  &-1
+    background-image: url(/assets/Home/wave-haikei.svg)
+    bacgkround-size: cover
+    height: 100px
+
+  &-2
+    background-image: url(/assets/Home/layered-peaks-haikei.svg)
+    background-postion: 100% 50%
+    background-size: cover
+
+.solution-board
+  text-align: center
+  justify-content: space-between
+  width: 100%
+  padding: 30px 0 30px
+
+.solution
+  &-list
+    display: flex
+    justify-items: space-between
+    gap: 30px
+    width: auto
+    padding: 30px 5px 30px
+
+  &-card
+    flex: 1
+    justify-content: space-between
+    background-color: white
+    align-items: center
+    border-radius: 20px
+    padding: 20px 30px 20px
+    text-align: justify
+    gap: 1rem
+
+    img
+      height: auto
+      max-width: 175px
+.application-section
+  background-color: #b7b7b7
+
+.application-board
+  padding: 60px 0 30px
+  align-items: center
+  gap: 30px
+.app
+  &-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 30px
+  &-card
+    display: flex
+    width: 331.23px
+    height: 186.8px
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    border-radius: 20px
+    background: #F6F6F6
+    box-shadow: 5px 6px 30px 0px rgba(0, 0, 0, 0.10)

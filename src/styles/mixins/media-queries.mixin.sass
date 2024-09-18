@@ -5,6 +5,8 @@ $amr-screen-width-lg: 992px
 $amr-screen-width-xl: 1200px
 $amr-screen-width-xxl: 1400px
 
+@mixin theme($theme: DarkGray)
+  background: $theme
 @mixin amr-media-xs
   @media screen and (max-width: $amr-screen-width-xs)
     @content

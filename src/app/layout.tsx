@@ -1,9 +1,10 @@
-import { Footer } from '@shared-components';
+import { Footer, Header, Newsletter } from '@shared-components';
 
-import Header from '@shared-components/Header/Header';
-import Newsletter from '@shared-components/Newsletter/Newsletter';
+// import { Header } from '@shared-components';
+// import Newsletter from '@shared-components/Newsletter/Newsletter';
 import '@styles/globals.sass';
 import '@styles/color.sass';
+
 
 export const metadata = {
 	title: 'Next.js',

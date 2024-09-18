@@ -1,1 +1,14 @@
-@import './media-queries.sass'
+@import 'media-queries.mixin'
+@mixin center($flex: true)
+@if $flex
+    display: flex
+    justify-content: center
+    align-items: center
+@else
+    margin: 0 auto
+    
+@mixin hover-effect
+  transition: transform 0.3s ease
+
+  &:hover
+    transform: translateY(-5px)
