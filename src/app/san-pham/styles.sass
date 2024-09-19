@@ -1,5 +1,6 @@
-// .banner
-//     display: flex
-//     width: 100%
-//     align-items: center
-//     background-image: url('/assets/Product/Banner-product.png')
+@import '../../styles/mixins/mixins'
+.product
+    &-header
+        background-image: url('/assets/Product/Banner-product.png')
+        min-height: 1500px
+        @include banner

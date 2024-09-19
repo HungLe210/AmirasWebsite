@@ -8,15 +8,11 @@ export const metadata: Metadata = {
 }
 const page = () => {
     return (
-        <section className='product'>
-            <div className='product-header'>
-                <div className='banner'>
-                </div>
-
+        <div className='section'>
+            <div className='banner'>
             </div>
             <Button>Demo sản phẩm</Button>
-
-        </section>
+        </div>
     )
 }
 

@@ -1,23 +1,20 @@
 import React from 'react'
-import './styles.sass';
 import { Button } from '@shared-components';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Sản phẩm'
+    title: 'Blog'
 }
-const page = () => {
+const BlogPage = () => {
     return (
-        <section className='product'>
-            <div className='product-header'>
+        <section>
+            <div className='blog-header'>
                 <div className='banner'>
                 </div>
-
+                <Button>Demo sản phẩm</Button>
             </div>
-            <Button>Demo sản phẩm</Button>
-
         </section>
     )
 }
 
-export default page
+export default BlogPage
