@@ -1,0 +1,68 @@
+.container
+
+    h2
+        font-size: 22.5px
+    h3
+        font-size: 18px
+
+.slider
+    position: relative 
+    overflow: hidden
+    width: 100%
+    max-width: 100vw
+    height: 316.516px
+    .card
+        &-wrapper
+            padding: 60px 0 30px
+        &-list
+            position: absolute 
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            gap: 10px
+            transition: 1s
+            left: 0 
+            top: 0 
+        &-item
+            list-style: none 
+            width: fit-content
+            width: 240px
+    .buttons 
+        position: absolute 
+        top: 45% 
+        left: 5% 
+        width: 90% 
+        display: flex 
+        justify-content: space-between
+        button 
+            width: 50px 
+            height: 50px 
+            border-radius: 50% 
+            background-color: #fff5 
+            color: black 
+            border: none 
+            font-family: monospace 
+            font-weight: bold 
+            img 
+                width: 12px 
+                height: 12px 
+    .dots 
+        position: absolute 
+        bottom: 5px 
+        left: 0 
+        color: #fff 
+        width: 100% 
+        margin: 0 
+        padding: 0 
+        display: flex 
+        justify-content: center 
+        li 
+            list-style: none 
+            width: 10px 
+            height: 10px 
+            background-color: #fff 
+            margin: 10px 
+            border-radius: 20px 
+            transition: 0.5s 
+        li.active 
+            width: 30px 

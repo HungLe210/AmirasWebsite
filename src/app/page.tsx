@@ -1,6 +1,7 @@
 import { Button } from '@shared-components';
 import Image from 'next/image';
 import './styles.sass';
+import { Carousel } from '@shared-components/Carousel';
 
 export default function HomePage() {
 	return (
@@ -327,6 +328,8 @@ export default function HomePage() {
 					</div>
 				</div>
 			</div>
+
+			<Carousel></Carousel>
 
 		</div>
 	);
