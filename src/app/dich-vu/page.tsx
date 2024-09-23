@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 const page = () => {
     return (
-        <section className='section'>
+        <section className='service'>
             <div className='service-header'>
                 <div className='service-header-content'>
                     <h1>Dịch vụ</h1>

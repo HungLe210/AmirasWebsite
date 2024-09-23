@@ -24,13 +24,37 @@
 
         li
             display: inline-block
+            float: left
+
             margin: 0 9px
+
+            &:hover .navbar-item-submenu
+                opacity: 1
+                top: 100px
+                visibility: visible
 
     &-item
         color: black
         font-weight: bold
         text-decoration: none
+        transition: all 0.25s ease
+        position: relative
+        float: left
 
+        &-submenu
+            display: flex
+            flex-direction: column
+            text-align: left
+            opacity: 0
+            position: absolute
+            visibility: hidden
+            top: 35px
+            z-index: 1
+
+            & li
+                display: block
+                width: 100%
+                background: white
 /* header infor */
 
 @media screen and (max-width: 1024px)

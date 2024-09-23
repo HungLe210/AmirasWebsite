@@ -8,13 +8,17 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/Service/Service-banner.png')
     background-position-y: 60%
     min-height: 200px
+    transition: all 0.5 ease
+    text-align: left
     @include banner
 
     &-content
         display: flex
         flex-direction: column
-        justify-content: center
+        align-items: flex-start
         gap: 1.5rem
         padding: 3rem 1rem
         color: white
+        text-align: left
+
         @include container
