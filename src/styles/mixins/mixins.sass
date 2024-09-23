@@ -1,14 +1,13 @@
 @import 'media-queries.mixin'
+@import 'container.mixin'
+@import 'effect.mixin'
+
 @mixin center($flex: true)
-@if $flex
+  @if $flex
     display: flex
     justify-content: center
     align-items: center
-@else
+  @else
     margin: 0 auto
-    
-@mixin hover-effect
-  transition: transform 0.3s ease
 
-  &:hover
-    transform: translateY(-5px)
+
