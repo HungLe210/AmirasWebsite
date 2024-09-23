@@ -6,8 +6,7 @@ import { Navbar } from './Navbar';
 
 export const Header = () => {
     return (
-
-        < section className='header-section' >         {/* header-section */}
+        <section className='header-section' >
             <SearchHeader />
             <Navbar />
         </section >

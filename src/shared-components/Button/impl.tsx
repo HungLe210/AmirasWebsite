@@ -2,12 +2,13 @@ import React from 'react';
 import './styles.sass';
 import { ButtonProps } from './types';
 
-export const Button = ({ children, hasShadow, hasSpecialHover }: ButtonProps) => {
+export const Button = ({ children, hasShadow, hasSpecialHover, isYellow }: ButtonProps) => {
 
     const button_type = [
         'btn',
         hasShadow ? 'btn-shadow' : '',
-        hasSpecialHover ? 'btn-special-hover' : ''
+        hasSpecialHover ? 'btn-special-hover' : '',
+        isYellow ? 'btn-yellow' : ''
     ].join(' ');
 
     return (

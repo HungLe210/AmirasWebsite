@@ -1,3 +1,4 @@
+@import '../styles/mixins/mixins'
 .banner
   display: flex
   width: 100%
@@ -44,12 +45,6 @@
     background-image: url(/assets/Home/layered-peaks-haikei.svg)
     animation: fadeInOpacity 1s ease-out forwards
 
-.solution-board
-  text-align: center
-  justify-content: space-between
-  width: 100%
-  padding: 30px 0 30px
-
 .solution
   &-list
     display: flex
@@ -60,25 +55,35 @@
 
   &-card
     flex: 1
-    justify-content: space-between
-    background-color: white
-    align-items: center
     border-radius: 20px
-    padding: 20px 30px 20px
     text-align: justify
-    gap: 1rem
+    align-items: center
+
+    display: flex
+    flex-direction: column
+    background-color: white
+    padding: 20px 40px 10px
+
+    gap: 2rem
 
     img
       height: auto
       max-width: 175px
 
-.app
-  background-color: #e7e7e7
-
   &-board
-    padding: 60px 0 30px
+    text-align: center
+    justify-content: space-between
+    width: 100%
+    padding: 30px 0 30px
+.app
+  background-color: rgb(245, 245, 245)
+  padding: 60px 0 30px
+  &-board
+    display: flex
+    flex-direction: column
     align-items: center
     gap: 20px
+    @include container
 
   &-list
     display: flex
@@ -98,14 +103,16 @@
     box-shadow: 5px 6px 30px 0px rgba(0, 0, 0, 0.10)
 
 .fundamental
-  display: flex
-  flex-direction: column
-  align-items: center
-  gap: 20px
-  width: 100%
+  padding: 30px 0
+  &-board
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px
+    @include container
 
   &-title
-    width: 100%
+    //
   &-content
     width: 100%
     display: flex
@@ -141,10 +148,11 @@
 
 .reason
   background: rgba(255, 72, 0, 0.05)
+  padding: 60px 0 30px
   &-board
-    padding: 60px 0 30px
     align-items: center
     gap: 20px
+    @include container
 
   &-list
     display: flex
@@ -166,10 +174,11 @@
     h3,h4
       font-weight: bold
 .customer
+  padding: 60px 0 30px
   &-board
-    padding: 60px 0 30px
     align-items: center
     gap: 20px
+    @include container
 
   &-list
     display: flex

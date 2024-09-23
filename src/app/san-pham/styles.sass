@@ -1,6 +1,75 @@
 @import '../../styles/mixins/mixins'
+
 .product
+    strong
+        color: #e84c3c
     &-header
         background-image: url('/assets/Product/Banner-product.png')
-        min-height: 1500px
+        padding-top: 400px
+        background-position: 50% 50%
+
         @include banner
+        &-content
+            position: relative
+            height: 300px
+            @include container
+        &-item
+            position: absolute
+            top: 30%
+            right: 0
+            width: 45%
+            display: flex
+            gap: 20px
+.difficult
+    background: rgb(245, 245, 245)
+    padding: 60px 0 30px
+    &-board
+        @include container
+        h2
+            color: #e84c3c
+            font-weight: bold
+    &-list
+        display: flex
+        flex-direction: row
+        justify-items: space-between
+        gap: 30px
+        width: auto
+        padding: 30px 5px 30px
+    &-card
+        flex: 1
+        border-radius: 20px
+        align-items: center
+        text-align: center
+        display: flex
+        flex-direction: column
+        background-color: white
+        padding: 20px 30px 30px
+        transition: all .5s ease
+        img
+            height: auto
+            max-width: 175px
+        @include hover-effect(white)
+
+.advertise
+    padding: 30px 0
+    &-board
+        display: flex
+        justify-content: space-between
+        padding: 0 60px
+        @include container
+
+.base_0
+    padding: 60px 0 0
+.base
+    @for $i from 0 through 3
+        @if $i % 2 != 0 or $i ==0
+            &_#{$i}
+                background: rgb(245, 245, 245)
+
+.difference
+    &-board
+        @include container
+        &-content
+            display: flex
+            flex-direction: row
+            @include container
