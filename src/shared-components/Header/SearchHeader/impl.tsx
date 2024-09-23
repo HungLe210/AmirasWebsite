@@ -18,16 +18,16 @@ export const SearchHeader = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link className='header-item' href='#'>Về Smart Loyalty</Link>
+                        <Link className='header-item' href='/ve-chung-toi'>Về Smart Loyalty</Link>
                     </li>
                     <li>
-                        <Link className='header-item' href='#'>Sản phẩm</Link>
+                        <Link className='header-item' href='/san-pham'>Sản phẩm</Link>
                     </li>
                     <li>
-                        <Link className='header-item' href='#'>Dịch vụ</Link>
+                        <Link className='header-item' href='/dich-vu'>Dịch vụ</Link>
                     </li>
                     <li>
-                        <Link className='header-item' href='#'>Liên hệ</Link>
+                        <Link className='header-item' href='/lien-he'>Liên hệ</Link>
                     </li>
                 </ul>
 
