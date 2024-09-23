@@ -6,17 +6,19 @@ import { useEffect } from 'react';
 import CustomerCard from '@shared-components/Card/CustomerCard/impl';
 
 export const Carousel = () => {
-	let cardButton = "đọc thêm"
-	let cardDes = "Cung cấp sản phẩm cho vay tiêu dùng đa dạng như xe máy, ô tô, xe tải nhẹ, xe điện,hàng điện máy, điện thoại,..."
-	let cardImage = "/assets/Home/hd-sai-gon-jpg.webp"
-	let cardTitle = "HD SAISON"
+	let cardButton = 'đọc thêm';
+	let cardDes =
+		'Cung cấp sản phẩm cho vay tiêu dùng đa dạng như xe máy, ô tô, xe tải nhẹ, xe điện,hàng điện máy, điện thoại,...';
+	let cardImage = '/assets/Home/hd-sai-gon-jpg.webp';
+	let cardTitle = 'HD SAISON';
+
 	useEffect(() => {
 		let slider = document.querySelector<HTMLDivElement>('.slider .card-list');
 		let items = document.querySelectorAll<HTMLDivElement>('.slider .card-list .card-item');
 		let next = document.getElementById('next');
 		let prev = document.getElementById('prev');
 		let dots = document.querySelectorAll('.slider .dots li');
-		
+
 		let lengthItems = items.length - 1;
 		let active = 0;
 		next!.onclick = function () {
@@ -29,13 +31,13 @@ export const Carousel = () => {
 		};
 
 		let refreshInterval = setInterval(() => {
-			next!.click();
+			// next!.click();
 		}, 3000);
+		let itemsPerSlide = 4;
 
 		function reloadSlider() {
+	
 			slider!.style.left = -items[active].offsetLeft + 'px';
-			console.log(items[active].offsetLeft);
-
 			//
 			let last_active_dot = document.querySelector('.slider .dots li.active');
 			console.log(last_active_dot);
@@ -44,7 +46,7 @@ export const Carousel = () => {
 
 			clearInterval(refreshInterval);
 			refreshInterval = setInterval(() => {
-				next!.click();
+				// next!.click();
 			}, 3000);
 		}
 
@@ -54,6 +56,7 @@ export const Carousel = () => {
 				reloadSlider();
 			});
 		});
+
 		return () => clearInterval(refreshInterval);
 	}, []);
 
@@ -64,9 +67,14 @@ export const Carousel = () => {
 				<h3>Hang tram doanh nghiep</h3>
 				<div className="slider">
 					<ul className="card-list">
-						{Array.from({ length: 5}, (v, i) => (
+						{Array.from({ length: 8 }, (v, i) => (
 							<li key={i} className="card-item">
-								<CustomerCard cardButton={cardButton} cardDescription={cardDes} cardImage={cardImage} cardTitle={cardTitle}></CustomerCard>
+								<CustomerCard
+									cardButton={cardButton}
+									cardDescription={cardDes}
+									cardImage={cardImage}
+									cardTitle={cardTitle}
+								></CustomerCard>
 							</li>
 						))}
 					</ul>
@@ -81,11 +89,9 @@ export const Carousel = () => {
 					</div>
 					<ul className="dots">
 						<li className="active"></li>
-						{
-							Array.from({length:4}, (v,i)=>(
-								<li key={i}></li>
-							))
-						}
+						{Array.from({ length: 7 }, (v, i) => (
+							<li key={i}></li>
+						))}
 					</ul>
 				</div>
 			</div>
