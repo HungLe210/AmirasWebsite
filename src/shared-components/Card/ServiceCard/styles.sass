@@ -1,0 +1,72 @@
+.service-card
+    a
+        font-weight: 600
+    &-header
+        width: 100% 
+        display: flex
+        align-items: flex-start
+        gap: 10px
+        flex-direction: column
+        height: 73px
+    &-list
+        display: flex
+        gap: 10px
+        flex-wrap: wrap
+        
+    &-header
+        p
+            font-weight: 600
+            color: var(--primary)
+        &-category
+            width: 100%
+            text-align: start
+            padding: 0px 15px 15px 0px
+            display: flex
+            justify-content: space-between
+            a
+                color: black
+            
+            
+    btn
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .icon
+            color: #ffff
+        
+    &-content
+        height: 380px
+        width: 300px
+        display: flex
+        flex-direction: column
+        text-align: start
+        
+        .box-zoom-out
+            flex: 2
+            overflow: hidden
+            position: relative
+            img
+                height: 242px
+                width: 100%
+                transition: all 1s
+                -webkit-transform: scale(1)
+                &:hover 
+                    -webkit-transform: scale(1.2)
+                    transform: scale(1.2)
+        
+        &-details
+            flex: 1
+            height: 100%
+            padding: 15px 15px 15px 15px
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: flex-start
+            background-color: #F6F6F6
+            a
+                color: white
+         
+
+
+
+            
