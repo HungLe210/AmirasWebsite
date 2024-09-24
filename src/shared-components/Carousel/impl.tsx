@@ -4,13 +4,14 @@ import './styles.sass';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import CustomerCard from '@shared-components/Card/CustomerCard/impl';
+import { Button } from '@shared-components';
 
 export const Carousel = () => {
 	let cardButton = 'đọc thêm';
 	let cardDes =
 		'Cung cấp sản phẩm cho vay tiêu dùng đa dạng như xe máy, ô tô, xe tải nhẹ, xe điện,hàng điện máy, điện thoại,...';
 	let cardImage = '/assets/Home/hd-sai-gon-jpg.webp';
-	let cardTitle = 'HD SAISON';
+	let cardTitle = 'HD SAIGON';
 
 	useEffect(() => {
 		let slider = document.querySelector<HTMLDivElement>('.slider .card-list');
@@ -36,7 +37,7 @@ export const Carousel = () => {
 		let itemsPerSlide = 4;
 
 		function reloadSlider() {
-	
+
 			slider!.style.left = -items[active].offsetLeft + 'px';
 			//
 			let last_active_dot = document.querySelector('.slider .dots li.active');
@@ -61,10 +62,10 @@ export const Carousel = () => {
 	}, []);
 
 	return (
-		<section className="section">
-			<div className="container card-wrapper">
-				<h2>Khach hang cua chung toi</h2>
-				<h3>Hang tram doanh nghiep</h3>
+		<section className="customer">
+			<div className="customer-board card-wrapper">
+				<h2>KHÁCH HÀNG CỦA CHÚNG TÔI</h2>
+				<h3>Hàng trăm Doanh nghiệp tin dùng giải pháp Smart Loyalty</h3>
 				<div className="slider">
 					<ul className="card-list">
 						{Array.from({ length: 8 }, (v, i) => (
@@ -94,6 +95,9 @@ export const Carousel = () => {
 						))}
 					</ul>
 				</div>
+				<Button hasShadow hasSpecialHover>
+					<Link href='#sign_up_form' style={{ color: 'white', textDecoration: 'none' }} scroll={true}>Đăng ký tư vấn</Link>
+				</Button>
 			</div>
 		</section>
 	);

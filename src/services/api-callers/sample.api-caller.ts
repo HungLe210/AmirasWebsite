@@ -1,11 +1,11 @@
 import { VMSample } from '@models/view-models';
-import { BaseApiCaller } from './base.api-caller';
-import { BaseApiCallerOpts } from './types';
+import { baseApiCaller } from './base.api-caller';
+import { baseApiCallerOpts } from './types';
 import { createDataTransformFn } from '@utils';
 import { AMSample } from '@models/api-models';
 
-export class SampleApiCaller extends BaseApiCaller {
-	constructor(opts: BaseApiCallerOpts) {
+export class SampleApiCaller extends baseApiCaller {
+	constructor(opts: baseApiCallerOpts) {
 		super(opts);
 	}
 

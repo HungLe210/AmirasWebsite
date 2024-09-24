@@ -1,0 +1,9 @@
+@import '../../../../styles/mixins/mixins'
+.foundation_0
+    padding: 60px 0 0
+.foundation
+    @for $i from 0 through 3
+        &_#{$i}
+            padding: 20px 0
+            @if $i % 2 != 0 or $i ==0
+                background: rgb(245, 245, 245)

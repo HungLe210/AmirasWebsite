@@ -2,7 +2,6 @@ import { Footer, Header, Newsletter } from '@shared-components';
 import '@styles/globals.sass';
 import '@styles/color.sass';
 
-
 export const metadata = {
 	title: {
 		template: '%s - SMART LOYALTY',

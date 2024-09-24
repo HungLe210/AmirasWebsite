@@ -9,9 +9,10 @@
     justify-content: space-between
     @include container
 
-    &-logo img
-        height: 80px
-        width: 153px
+    &-logo
+
+        margin-right: 30px
+        transition: all 0.5s ease
 
     & ul
         display: flex
@@ -19,42 +20,54 @@
         justify-content: flex-start
         list-style-type: none
         flex-wrap: wrap
-        gap: 10px
+        gap: 20px
         align-items: center
 
-        li
-            display: inline-block
-            float: left
+        & li
+            position: relative
+            display: flex
 
-            margin: 0 9px
+            img
+                margin-top: 5px
+
+            & a
+                width: 100%
+                text-decoration: none
 
             &:hover .navbar-item-submenu
                 opacity: 1
-                top: 100px
                 visibility: visible
+
+            // &:hover .navbar-item-submenu
+            //     opacity: 1
+            //     top: 20px
+            //     visibility: visible
+            //     background-color: #faaafa
 
     &-item
         color: black
-        font-weight: bold
-        text-decoration: none
-        transition: all 0.25s ease
-        position: relative
-        float: left
-
         &-submenu
-            display: flex
-            flex-direction: column
+            min-width: 250px
+            display: inline-block
             text-align: left
             opacity: 0
-            position: absolute
             visibility: hidden
-            top: 35px
+            position: absolute
             z-index: 1
-
+            top: 15px
+            background: white
+            padding: 30px
             & li
-                display: block
                 width: 100%
-                background: white
+                padding: 10px 0
+                border-bottom: 1px solid #afafaf
+
+                & a
+                    color: #949494
+                    font-weight: 100
+                    &:hover
+                        color: #2c2c2c
+
 /* header infor */
 
 @media screen and (max-width: 1024px)

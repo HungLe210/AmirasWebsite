@@ -1,13 +1,13 @@
 import { RestApiClient } from '@utils';
-import { BaseApiCallerEndpointDef, BaseApiCallerOpts } from './types';
+import { baseApiCallerEndpointDef, baseApiCallerOpts } from './types';
 
-export abstract class BaseApiCaller {
+export abstract class baseApiCaller {
 	protected _restApiClient: RestApiClient;
 	protected _endpointDefs: {
-		[name: string]: BaseApiCallerEndpointDef;
+		[name: string]: baseApiCallerEndpointDef;
 	};
 
-	constructor(opts: BaseApiCallerOpts) {
+	constructor(opts: baseApiCallerOpts) {
 		this._restApiClient = new RestApiClient(opts.restApiClientOpts);
 		this._endpointDefs = {};
 	}
