@@ -100,7 +100,7 @@
 // 			.catch((err) => this._handleError(err));
 // 	}
 
-// 	setBaseURL(baseURL: string) {
+// 	setbaseURL(baseURL: string) {
 // 		this._axiosInstance.defaults.baseURL = baseURL;
 // 	}
 

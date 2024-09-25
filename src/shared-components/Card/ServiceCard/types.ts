@@ -3,7 +3,9 @@ type ServiceCardType = {
         name: string,
         url: string
     },
-    img: string,
-    title:string,
-    detailUrl: string
+    items:{
+        img: string,
+        title:string,
+        detailUrl: string
+    }[]
 }

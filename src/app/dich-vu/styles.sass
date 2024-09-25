@@ -6,7 +6,6 @@
     transition: all 0.5 ease
     text-align: left
     @include banner
-
     &-content
         display: flex
         flex-direction: column
@@ -16,3 +15,43 @@
         color: white
         text-align: left
         @include container
+
+
+.service
+    &-category
+        width: 100% 
+        display: flex
+        align-items: flex-start
+        gap: 10px
+        flex-direction: column
+        height: 73px
+        padding: 50px 0px
+        p
+            font-weight: 600
+            font-size: 18px
+            color: var(--primary)
+        &-content
+            width: 100%
+            text-align: start
+            padding: 0px 15px 15px 0px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            a
+                color: black
+            h2
+                font-size: 24px
+                width: fit-content
+            .btn
+                width: 130px
+                min-width: 130px
+                align-self: center
+                display: flex
+                font-size: 15px
+                padding:0
+                font-weight: 500
+                padding: 15px
+                justify-content: space-between
+                align-items: center
+                
+                

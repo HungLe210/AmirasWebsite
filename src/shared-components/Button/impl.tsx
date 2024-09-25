@@ -4,7 +4,7 @@ import { ButtonProps } from './types';
 
 export const Button = ({ children, hasShadow, hasSpecialHover, isYellow }: ButtonProps) => {
 
-    const button_type = [
+    const button_class = [
         'btn',
         hasShadow ? 'btn-shadow' : '',
         hasSpecialHover ? 'btn-special-hover' : '',
@@ -12,7 +12,7 @@ export const Button = ({ children, hasShadow, hasSpecialHover, isYellow }: Butto
     ].join(' ');
 
     return (
-        <button className={button_type}>{children}</button>
+        <button className={button_class}>{children}</button>
     );
 
 }
