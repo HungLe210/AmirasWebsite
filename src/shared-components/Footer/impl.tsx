@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.sass';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const Footer = () => (
     <footer >
@@ -36,29 +37,29 @@ export const Footer = () => (
                                 <div className='col-inner'>
                                     <h4>Sản phẩm - Dịch vụ</h4>
                                     <div className='is-divider divider clearfix' style={{ marginTop: '10px', marginBottom: '10px' }}></div>
-                                    <p><a href=''></a>Tư vấn</p>
-                                    <p><a href=''></a>Đào tạo</p>
-                                    <p><a href=''></a>Phần mềm</p>
+                                    <p><Link href='/dich-vu/tu-van-loyalty-marketing'></Link>Tư vấn</p>
+                                    <p><Link href='/dich-vu/dao-tao-noi-bo-loyalty-marketing'></Link>Đào tạo</p>
+                                    <p><Link href='/san-pham'></Link>Phần mềm</p>
                                 </div>
                             </div>
                             <div className='col large-4'>
                                 <div className='col-inner'>
                                     <h4>Kiến thức</h4>
                                     <div className='is-divider divider clearfix' style={{ marginTop: '10px', marginBottom: '10px' }}></div>
-                                    <p><a href=''></a>Blog</p>
-                                    <p><a href=''></a>Tài liệu - Ebook</p>
-                                    <p><a href=''></a>Event</p>
+                                    <p><Link href='/blog'></Link>Blog</p>
+                                    <p><Link href='/ebook-tai-lieu'></Link>Tài liệu - Ebook</p>
+                                    <p><Link href='/su-kien'></Link>Event</p>
                                 </div>
                             </div>
                             <div className='col large-4'>
                                 <div className='col-inner'>
                                     <h4>Hỗ trợ</h4>
                                     <div className='is-divider divider clearfix' style={{ marginTop: '10px', marginBottom: '10px' }}></div>
-                                    <p><a href=''></a>Trung tâm hỗ trợ</p>
-                                    <p><a href=''></a>Hình thức thanh toán</p>
-                                    <p><a href=''></a>Chính sách bảo mật</p>
-                                    <p><a href=''></a>Hướng dẫn sử dụng</p>
-                                    <p><a href=''></a>Liên hệ</p>
+                                    <p><Link href='/ho-tro'></Link>Trung tâm hỗ trợ</p>
+                                    <p><Link href='/hinh-thuc-thanh-toan'></Link>Hình thức thanh toán</p>
+                                    <p><Link href='/chinh-sach-bao-mat'></Link>Chính sách bảo mật</p>
+                                    <p><Link href='/huong-dan-su-dung'></Link>Hướng dẫn sử dụng</p>
+                                    <p><Link href='/lien-he'></Link>Liên hệ</p>
                                 </div>
                             </div>
                         </div>

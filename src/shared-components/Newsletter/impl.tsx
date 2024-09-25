@@ -3,7 +3,8 @@ import React from 'react';
 import './styles.sass';
 import Image from 'next/image';
 import SignUpCard from '@shared-components/SignUpCard/impl';
-import { CircleCheckIcon } from '@constants/icons/icons';
+import { FaRegCheckCircle } from 'react-icons/fa';
+
 
 export const Newsletter = () => (
     <section className='newsletter'>
@@ -11,10 +12,10 @@ export const Newsletter = () => (
             <div className='newsletter-details'>
                 <p><strong>Smart Loyalty - Smart Choice</strong></p>
                 <div>
-                    <p>{CircleCheckIcon}Giải pháp toàn diện</p>
-                    <p>{CircleCheckIcon}Phù hợp doanh nghiệpViệt</p>
-                    <p>{CircleCheckIcon}Dễ dàng sử dụng</p>
-                    <p>{CircleCheckIcon}Dễ đo lường, đánh giá hiệu quả</p>
+                    <p><FaRegCheckCircle className='icon' />Giải pháp toàn diện</p>
+                    <p><FaRegCheckCircle className='icon' />Phù hợp doanh nghiệpViệt</p>
+                    <p><FaRegCheckCircle className='icon' />Dễ dàng sử dụng</p>
+                    <p><FaRegCheckCircle className='icon' />Dễ đo lường, đánh giá hiệu quả</p>
                 </div>
                 <p>Sẵn sàng đồng hành và hỗ trợ doanh nghiệp!</p>
                 <Image src='/assets/CRM_6.png' width={268} height={200} alt='' />

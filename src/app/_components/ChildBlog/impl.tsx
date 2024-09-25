@@ -7,8 +7,8 @@ import './styles.sass';
 export function ChildBlog() {
     return (
         <section className='childblog'>
-            <div className='reason-board container section'>
-                <h2>Blog</h2>
+            <div className='reason-board'>
+                <h2>BLOG HỮU ÍCH</h2>
                 <div className='reason-list'>
                     <div className='reason-card col-inner'>
                         <Image src='/assets/Home/Bank.png' width={30} height={90} alt='' />

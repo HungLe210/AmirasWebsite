@@ -7,8 +7,8 @@ import './styles.sass';
 export function ChildEvent() {
     return (
         <section className='event'>
-            <div className='reason-board container section'>
-                <h2>TẠI SAO DOANH NGHIỆP LỰA CHỌN SMART LOYALTY?</h2>
+            <div className='reason-board'>
+                <h2>SỰ KIỆN MỚI NHẤT</h2>
                 <div className='reason-list'>
                     <div className='reason-card col-inner'>
                         <Image src='/assets/Home/Bank.png' width={30} height={90} alt='' />
