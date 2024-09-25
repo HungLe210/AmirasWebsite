@@ -1,8 +1,8 @@
-import React from 'react';
-import "./styles.sass"
+import React from 'react'
+import "../tu-van-loyalty-marketing/styles.sass"
 import { ServiceCard } from '@shared-components/Card/ServiceCard';
 const page = () => {
-	const data: ServiceCardType[] = [
+    const data: ServiceCardType[] = [
 		{
 			category: {
 				name: 'Tư vấn Loyalty Marketing',
@@ -23,12 +23,11 @@ const page = () => {
 		},
 		
 	];
-
-	return (
-		<section className="service-section">
+    return (
+        <section className="service-section">
 			<div className="service-section-header">
 				<div className="service-section-header-content">
-					<h1 className="service-section-title">Tư vấn Loyalty Marketing</h1>
+					<h1 className="service-section-title">Đào tạo Public Loyalty Marketing</h1>
 				</div>
 			</div>
 
@@ -45,7 +44,7 @@ const page = () => {
 				</div>
 			</section>
 		</section>
-	);
-};
+    )
+}
 
-export default page;
+export default page

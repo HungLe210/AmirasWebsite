@@ -23,8 +23,8 @@ export const Navbar = () => {
 
                     <ul className='navbar-item-submenu'>
                         <li><Link href='/dich-vu/tu-van-loyalty-marketing'>Tư vấn Loyalty Marketing</Link></li>
-                        <li><Link href='/dich-vu/san-pham-2'>Đào tạo nội bộ Loyalty Marketing</Link></li>
-                        <li><Link href='/dich-vu/san-pham-2'>Đào tạo Public Loyalty Marketing</Link></li>
+                        <li><Link href='/dich-vu/dao-tao-noi-bo-loyalty-marketing'>Đào tạo nội bộ Loyalty Marketing</Link></li>
+                        <li><Link href='/dich-vu/dao-tao-public-loyalty-marketing'>Đào tạo Public Loyalty Marketing</Link></li>
                     </ul>
                 </li>
                 <li>
