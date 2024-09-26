@@ -3,53 +3,12 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image';
 import './styles.sass';
+import { Carousel } from '@shared-components/Carousel';
 
 export function ChildBlog() {
     return (
         <section className='childblog'>
-            <div className='reason-board container section'>
-                <h2>Blog</h2>
-                <div className='reason-list'>
-                    <div className='reason-card col-inner'>
-                        <Image src='/assets/Home/Bank.png' width={30} height={90} alt='' />
-                        <h3>GIẢI PHÁP TOÀN DIỆN</h3>
-                        <h4>Tư vấn – Đào tạo – Công cụ</h4>
-                        <p>Tài chính - Ngân hàng</p>
-                    </div>
-                    <div className='reason-card col-inner'>
-                        <Image src='/assets/Home/Bank.png' width={30} height={90} alt='' />
-                        <h3>GIẢI PHÁP TOÀN DIỆN</h3>
-                        <h4>Tư vấn – Đào tạo – Công cụ</h4>
-                        <p>Tài chính - Ngân hàng</p>
-                    </div>
-                    <div className='reason-card col-inner'>
-                        <Image src='/assets/Home/Bank.png' width={30} height={90} alt='' />
-                        <h3>GIẢI PHÁP TOÀN DIỆN</h3>
-                        <h4>Tư vấn – Đào tạo – Công cụ</h4>
-                        <p>Tài chính - Ngân hàng</p>
-                    </div>
-                    <div className='reason-card col-inner'>
-                        <Image src='/assets/Home/Bank.png' width={30} height={90} alt='' />
-                        <h3>GIẢI PHÁP TOÀN DIỆN</h3>
-                        <h4>Tư vấn – Đào tạo – Công cụ</h4>
-                        <p>Tài chính - Ngân hàng</p>
-                    </div>
-                    <div className='reason-card col-inner'>
-                        <Image src='/assets/Home/Bank.png' width={30} height={90} alt='' />
-                        <h3>GIẢI PHÁP TOÀN DIỆN</h3>
-                        <h4>Tư vấn – Đào tạo – Công cụ</h4>
-                        <p>Tài chính - Ngân hàng</p>
-                    </div>
-                    <div className='reason-card col-inner'>
-                        <Image src='/assets/Home/Bank.png' width={30} height={90} alt='' />
-                        <h3>GIẢI PHÁP TOÀN DIỆN</h3>
-                        <h4>Tư vấn – Đào tạo – Công cụ</h4>
-
-                        <p>Tài chính - Ngân hàng</p>
-                    </div>
-
-                </div>
-            </div>
+            <Carousel uniqueID='event' shape='circle'/>
         </section>
     )
 }

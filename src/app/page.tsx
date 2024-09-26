@@ -23,7 +23,7 @@ export default function HomePage() {
 			<Application />
 			<Fundamental />
 			<Reason />
-			<Carousel />
+			<Carousel uniqueID='customer'/>
 
 			<ChildEvent />
 

@@ -2,101 +2,115 @@
 import Link from 'next/link';
 import './styles.sass';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import CustomerCard from '@shared-components/Card/CustomerCard/impl';
 import { Button } from '@shared-components';
+import { CustomerCardType } from '@shared-components/Card/CustomerCard/types';
 
-export const Carousel = () => {
+export const Carousel = ({uniqueID, shape="retangle"}:{
+	uniqueID:string,
+	shape?:string 
+}) => {
+	const [currentIndex, setCurrentIndex] = useState(0);
 	let cardButton = 'đọc thêm';
-	let cardDes =
+	let cardDescription =
 		'Cung cấp sản phẩm cho vay tiêu dùng đa dạng như xe máy, ô tô, xe tải nhẹ, xe điện,hàng điện máy, điện thoại,...';
 	let cardImage = '/assets/Home/hd-sai-gon-jpg.webp';
 	let cardTitle = 'HD SAIGON';
+	const totalPages = 2;
 
+	const handleNext = () => {
+		setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
+	};
+
+	const handlePrev = () => {
+		setCurrentIndex((prevIndex) => (prevIndex - 1 + totalPages) % totalPages);
+	};
+	
 	useEffect(() => {
-		let slider = document.querySelector<HTMLDivElement>('.slider .card-list');
-		let items = document.querySelectorAll<HTMLDivElement>('.slider .card-list .card-item');
-		let next = document.getElementById('next');
-		let prev = document.getElementById('prev');
-		let dots = document.querySelectorAll('.slider .dots li');
-
-		let lengthItems = items.length - 1;
-		let active = 0;
-		next!.onclick = function () {
-			active = active + 1 <= lengthItems ? active + 1 : 0;
-			reloadSlider();
-		};
-		prev!.onclick = function () {
-			active = active - 1 >= 0 ? active - 1 : lengthItems;
-			reloadSlider();
-		};
-
-		let refreshInterval = setInterval(() => {
-			// next!.click();
-		}, 3000);
-		let itemsPerSlide = 4;
-
-		function reloadSlider() {
-
-			slider!.style.left = -items[active].offsetLeft + 'px';
-			//
-			let last_active_dot = document.querySelector('.slider .dots li.active');
-			console.log(last_active_dot);
-			last_active_dot!.classList.remove('active');
-			dots[active].classList.add('active');
-
-			clearInterval(refreshInterval);
-			refreshInterval = setInterval(() => {
-				// next!.click();
-			}, 3000);
+		let group = document.querySelector<HTMLDivElement>(`#carousel-list-wrapper-${uniqueID}`);
+		console.log(group)
+		if (group) {
+			group.style.transform = `translateX(-${currentIndex * 1020}px)`; // Adjust based on the current index
+			console.log(group.style.transform);
 		}
+	}, [currentIndex]);
 
-		dots.forEach((li, key) => {
-			li.addEventListener('click', () => {
-				active = key;
-				reloadSlider();
-			});
-		});
-
-		return () => clearInterval(refreshInterval);
-	}, []);
-
+	const customerCards: CustomerCardType[] = [
+		{
+			cardButton: cardButton,
+			cardDescription: cardDescription,
+			cardImage: cardImage,
+			cardTitle: cardTitle,
+		},
+		{
+			cardButton: cardButton,
+			cardDescription: cardDescription,
+			cardImage: cardImage,
+			cardTitle: cardTitle,
+		},
+		{
+			cardButton: cardButton,
+			cardDescription: cardDescription,
+			cardImage: cardImage,
+			cardTitle: cardTitle,
+		},
+		{
+			cardButton: cardButton,
+			cardDescription: cardDescription,
+			cardImage: cardImage,
+			cardTitle: cardTitle,
+		},
+		
+	];
 	return (
 		<section className="customer">
-			<div className="customer-board card-wrapper">
-				<h2>KHÁCH HÀNG CỦA CHÚNG TÔI</h2>
-				<h3>Hàng trăm Doanh nghiệp tin dùng giải pháp Smart Loyalty</h3>
-				<div className="slider">
-					<ul className="card-list">
-						{Array.from({ length: 8 }, (v, i) => (
-							<li key={i} className="card-item">
-								<CustomerCard
-									cardButton={cardButton}
-									cardDescription={cardDes}
-									cardImage={cardImage}
-									cardTitle={cardTitle}
-								></CustomerCard>
-							</li>
-						))}
-					</ul>
-
-					<div className="buttons">
-						<button id="prev">
-							<img src={'/assets/backward-arrow.png'} alt="" />
-						</button>
-						<button id="next">
-							<img src={'/assets/next.png'} alt="" />
-						</button>
+			<h2>KHÁCH HÀNG CỦA CHÚNG TÔI</h2>
+			<h3>Hàng trăm Doanh nghiệp tin dùng giải pháp Smart Loyalty</h3>
+			<div className="carousel">
+				<div className="carousel-list">
+					<div className={`carousel-list-wrapper`} id={`carousel-list-wrapper-${uniqueID}`} >
+						{Array.from({ length: 2 }, (item, index1) => {
+							return (
+								<div className="carousel-group" key={index1}>
+									{customerCards.map((item, index) => {
+										return (
+											<CustomerCard
+												key={index}
+												cardButton={item.cardButton}
+												cardDescription={item.cardDescription}
+												cardImage={item.cardImage}
+												cardTitle={item.cardTitle}
+											></CustomerCard>
+										);
+									})}
+								</div>
+							);
+						})}
 					</div>
-					<ul className="dots">
-						<li className="active"></li>
-						{Array.from({ length: 7 }, (v, i) => (
-							<li key={i}></li>
+
+					
+
+					<button className={`carousel-list-prev carousel-list-btn carousel-list-btn-${shape}`} onClick={handlePrev}>
+						<Image alt="" src={'/assets/backward-arrow.png'} width={24} height={24} />
+					</button>
+					<button className={`carousel-list-next carousel-list-btn carousel-list-btn-${shape}`} onClick={handleNext}>
+						<Image alt="" src={'/assets/next.png'} width={24} height={24} />
+					</button>
+				</div>
+				<div className="carousel-dots">
+						{Array.from({ length: totalPages }, (_, index) => (
+							<span key={index} className={`dot ${currentIndex === index ? 'active' : ''}`}></span>
 						))}
-					</ul>
 				</div>
 				<Button hasShadow hasSpecialHover>
-					<Link href='#sign_up_form' style={{ color: 'white', textDecoration: 'none' }} scroll={true}>Đăng ký tư vấn</Link>
+					<Link
+						href="#sign_up_form"
+						style={{ color: 'white', textDecoration: 'none' }}
+						scroll={true}
+					>
+						Đăng ký tư vấn
+					</Link>
 				</Button>
 			</div>
 		</section>

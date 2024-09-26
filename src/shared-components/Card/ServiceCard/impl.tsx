@@ -6,7 +6,6 @@ export const ServiceCard = (cardDetail: ServiceCardType) => {
 	return (
 		<div className="service-card">
 			<div className="service-card-list">
-		
 				{cardDetail.items.map((card, index) => {
 					return (
 						<div className="service-card-content" key={index}>
