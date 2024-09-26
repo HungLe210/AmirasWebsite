@@ -27,3 +27,53 @@ export const solutionData: SolutionData = {
         }
     ]
 };
+
+export const navbarData = [
+    {
+        label: 'Trang chủ',
+        href: '/',
+        submenu: [],
+    },
+    {
+        label: 'Sản phẩm',
+        href: '/san-pham',
+        submenu: [],
+    },
+    {
+        label: 'Dịch vụ',
+        href: '/dich-vu',
+        submenu: [
+            { label: 'Tư vấn Loyalty Marketing', href: '/dich-vu/tu-van-loyalty-marketing' },
+            { label: 'Đào tạo nội bộ Loyalty Marketing', href: '/dich-vu/dao-tao-noi-bo-loyalty-marketing' },
+            { label: 'Đào tạo Public Loyalty Marketing', href: '/dich-vu/dao-tao-public-loyalty-marketing' },
+        ],
+    },
+    {
+        label: 'Giải pháp',
+        href: '/giai-phap',
+        submenu: [],
+    },
+    {
+        label: 'Về chúng tôi',
+        href: '/ve-smart-loyalty',
+        submenu: [
+            { label: 'Sản phẩm 1', href: '/san-pham-1' },
+            { label: 'Sản phẩm 2', href: '/san-pham-2' },
+        ],
+    },
+    {
+        label: 'Blog',
+        href: '/blog',
+        submenu: [
+            { label: 'Blog', href: '/blog' },
+            { label: 'E-book', href: '/ebook-tai-lieu' },
+            { label: 'Sự kiện', href: '/su-kien' },
+            { label: 'Video & Podcast', href: '/video-podcast' },
+        ],
+    },
+    {
+        label: 'Hỗ trợ',
+        href: '/ho-tro',
+        submenu: [],
+    },
+];

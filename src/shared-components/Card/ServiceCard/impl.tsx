@@ -2,11 +2,14 @@ import { Button } from '@shared-components/Button';
 import Image from 'next/image';
 import './styles.sass';
 import Link from 'next/link';
-export const ServiceCard = (cardDetail: ServiceCardType) => {
+import React, { forwardRef } from 'react';
+
+
+export const ServiceCard = forwardRef<HTMLDivElement, ServiceCardType>(({ items }, ref) => {
 	return (
-		<div className="service-card">
+		<div className="service-card" ref={ref}>
 			<div className="service-card-list">
-				{cardDetail.items.map((card, index) => {
+				{items.map((card, index) => {
 					return (
 						<div className="service-card-content" key={index}>
 							<div className="box-zoom-out">
@@ -20,7 +23,7 @@ export const ServiceCard = (cardDetail: ServiceCardType) => {
 							</div>
 
 							<div className="service-card-content-details">
-								<h5 className="service-card-content-title ">{card.title}</h5>
+								<h5 className="service-card-content-title">{card.title}</h5>
 								<Button>
 									<Link href={card.detailUrl}>chi tiết</Link>
 								</Button>
@@ -31,4 +34,4 @@ export const ServiceCard = (cardDetail: ServiceCardType) => {
 			</div>
 		</div>
 	);
-};
+});

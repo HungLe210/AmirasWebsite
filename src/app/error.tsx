@@ -1,5 +1,6 @@
 'use client'; // Error components must be Client Components
-
+import '@styles/globals.sass';
+import '@styles/color.sass';
 export default function ErrorPage({
 	reset,
 }: {

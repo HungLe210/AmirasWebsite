@@ -1,16 +1,13 @@
 import React from 'react';
 import './styles.sass';
 import Image from 'next/image';
+import { SmallBanner } from '@shared-components/Banner/SmallBanner';
 
 
 const page = () => {
     return (
         <section className='contact'>
-            <div className='service-header'>
-                <div className='service-header-content'>
-                    <h1>Liên hệ</h1>
-                </div>
-            </div>
+            <SmallBanner title='Liên hệ' />
 
             <section className='contact-content'>
                 <div className='contact-info'>

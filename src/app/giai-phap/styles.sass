@@ -1,5 +1,23 @@
-// .banner
-//     display: flex
-//     width: 100%
-//     align-items: center
-//     background-image: url('/assets/Product/Banner-product.png')
+@import '../../styles/mixins/mixins'
+
+.product
+    padding-bottom: 50px
+    strong
+        color: var(--button-color)
+    &-header
+        background-image: url('/assets/Product/Banner-product.png')
+        padding-top: 400px
+        background-position: 50% 50%
+
+        @include banner
+        &-content
+            position: relative
+            height: 300px
+            @include container
+        &-item
+            position: absolute
+            top: 30%
+            right: 0
+            width: 45%
+            display: flex
+            gap: 20px

@@ -8,7 +8,7 @@ export const Header = () => {
     return (
         <section className='header-section' >
             <SearchHeader />
-            <Navbar />
+            <nav><Navbar /></nav>
         </section >
     );
 };

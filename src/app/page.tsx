@@ -7,8 +7,8 @@ import {
 	HeaderBanner,
 	Solution,
 	Fundamental,
-	ChildBlog,
-	ChildEvent,
+	UsefulBlog,
+	NewEvent,
 	Application,
 	Reason,
 } from './_components';
@@ -25,9 +25,9 @@ export default function HomePage() {
 			<Reason />
 			<Carousel uniqueID='customer'/>
 
-			<ChildEvent />
+			<NewEvent />
 
-			<ChildBlog />
+			<UsefulBlog />
 		</section>
 	);
 }
