@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.sass';
 import { ButtonProps } from './types';
 
-export const Button = ({ children, hasShadow, hasSpecialHover, isYellow }: ButtonProps) => {
+export function Button({ children, hasShadow, hasSpecialHover, isYellow }: ButtonProps) {
 
     const button_class = [
         'btn',
@@ -14,5 +14,4 @@ export const Button = ({ children, hasShadow, hasSpecialHover, isYellow }: Butto
     return (
         <button className={button_class}>{children}</button>
     );
-
 }

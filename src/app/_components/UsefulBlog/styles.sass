@@ -1,0 +1,38 @@
+@import '../../../styles/mixins/mixins'
+
+.u_blog
+    padding: 60px 0 30px
+
+    &-board
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 20px
+        position: relative // Để mũi tên có thể được đặt bên trên
+        @include container
+
+    &-list
+        display: flex
+        overflow-x: hidden // Ẩn các phần bên ngoài
+        scroll-behavior: smooth // Thêm hiệu ứng cuộn mượt mà
+        width: 100% // Đảm bảo chiều rộng đủ để chứa các card
+        gap: 20px
+
+        .blog-card
+            flex: 0 0 auto // Đảm bảo mỗi card không co lại
+
+    .scroll-left, .scroll-right
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background-color: white // Màu nền cho nút
+        border: none
+        padding: 10px
+        cursor: pointer
+        z-index: 1 // Đặt lên trên các phần khác
+
+        &.scroll-left
+            left: 10px // Căn trái
+
+        &.scroll-right
+            right: 10px // Căn phải

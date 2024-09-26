@@ -5,96 +5,94 @@ import './styles.sass';
 import { ServiceCard } from '@shared-components/Card/ServiceCard';
 import Link from 'next/link';
 import Image from 'next/image';
+import { SmallBanner } from '@shared-components/Banner/SmallBanner';
 
 export const metadata: Metadata = {
 	title: 'Dịch vụ',
 };
 
+const data: ServiceCardType[] = [
+	{
+		category: {
+			name: 'Tư vấn Loyalty Marketing',
+			url: '/dich-vu/tu-van-loyalty-marketing',
+		},
+		items: [
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			},
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			},
+		],
+	},
+	{
+		category: {
+			name: 'Đào tạo nội bộ Loyalty Marketing',
+			url: '/dich-vu/dao-tao-noi-bo-loyalty-marketing',
+		},
+		items: [
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			},
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			},
+		],
+	},
+	{
+		category: {
+			name: 'Đào tạo Public Loyalty Marketing',
+			url: '/dich-vu/dao-tao-public-loyalty-marketing',
+		},
+		items: [
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			},
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			},
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			},
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			},
+			{
+				detailUrl: '#',
+				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+				img: '/assets/Service/Tu-van-Loyalty.png',
+			}
+		],
+	},
+];
+
+const BannerData = {
+	title: 'Dịch vụ',
+	content: 'Cung cấp giải pháp chương trình Loyalty toàn diện để hỗ trợ doanh nghiệp hoàn thành các mục tiêu về doanh thu, truyền thông và trải nghiệm khách hàng.'
+}
+
 const page = () => {
-	const data: ServiceCardType[] = [
-		{
-			category: {
-				name: 'Tư vấn Loyalty Marketing',
-				url: '/dich-vu/tu-van-loyalty-marketing',
-			},
-			items: [
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-			],
-		},
-		{
-			category: {
-				name: 'Đào tạo nội bộ Loyalty Marketing',
-				url: '/dich-vu/dao-tao-noi-bo-loyalty-marketing',
-			},
-			items: [
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-			],
-		},
-		{
-			category: {
-				name: 'Đào tạo Public Loyalty Marketing',
-				url: '/dich-vu/dao-tao-public-loyalty-marketing',
-			},
-			items: [
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				}
-			],
-		},
-	];
 
 	return (
 		<section className="service">
-			<div className="service-header">
-				<div className="service-header-content">
-					<h1>Dịch vụ</h1>
-					<p>
-						Cung cấp giải pháp chương trình Loyalty toàn diện để hỗ trợ doanh nghiệp hoàn thành các
-						mục tiêu về doanh thu, truyền thông và trải nghiệm khách hàng.
-					</p>
-				</div>
-			</div>
-
+			<SmallBanner title={BannerData.title} content={BannerData.content} />
 			<section>
 				<div className="container">
 					{data.map((item, index) => {

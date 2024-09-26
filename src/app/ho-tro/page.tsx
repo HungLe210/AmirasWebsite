@@ -2,18 +2,15 @@ import React from 'react';
 import { Button } from '@shared-components';
 import { Metadata } from 'next';
 import './styles.sass';
+import { SmallBanner } from '@shared-components/Banner/SmallBanner';
 
 export const metadata: Metadata = {
     title: 'Hỗ trợ'
 }
-const page = () => {
+export default function page() {
     return (
         <section className='support'>
-            <div className='service-header'>
-                <div className='service-header-content'>
-                    <h1>Hỗ trợ</h1>
-                </div>
-            </div>
+            <SmallBanner title='Hỗ trợ' />
 
             <section className='support'>
                 <div className='support-board'>
@@ -42,4 +39,3 @@ const page = () => {
     )
 }
 
-export default page
