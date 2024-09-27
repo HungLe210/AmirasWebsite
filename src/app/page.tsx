@@ -1,5 +1,5 @@
 import './styles.sass';
-import { Carousel } from '@shared-components/Carousel';
+
 import {
 	HeaderBanner,
 	Solution,
@@ -9,9 +9,10 @@ import {
 	Reason,
 } from './_components';
 import { CustomerCardType } from '@shared-components/Card/CustomerCard/types';
-import { CustomerCard } from '@shared-components/Card/CustomerCard';
+
+import { BlogCard, Carousel, CustomerCard } from '@shared-components';
 import { CardProps } from '@shared-components/Card/BlogCard/types';
-import { BlogCard } from '@shared-components/Card';
+
 
 let cardButton = 'đọc thêm';
 let cardDescription =
@@ -75,18 +76,16 @@ const blogCards: CardProps[] = [
 ]
 
 export default function HomePage() {
-
 	return (
 		<section className='section'>
 			<HeaderBanner />
-
 			<Solution />
 			<Application />
 			<Fundamental />
 			<Reason />
-			<Carousel uniqueID='customer' items={customerCards} ItemComponent={CustomerCard} shape='retangle' />
+			<Carousel uniqueID='customer' items={customerCards} ItemComponent={CustomerCard} shape='retangle' isButton={false} />
 			<NewEvent />
-			<Carousel<CardProps> uniqueID='blog' items={blogCards} ItemComponent={BlogCard} shape='circle' />
+			<Carousel<CardProps> uniqueID='blog' items={blogCards} ItemComponent={BlogCard} shape='circle' isButton={false} />
 		</section>
 	);
 }

@@ -28,4 +28,3 @@ export const CustomerCard: React.FC<{ item: CustomerCardType }> = ({
 	);
 };
 
-

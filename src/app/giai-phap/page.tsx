@@ -1,10 +1,11 @@
 import React from 'react';
 import './styles.sass';
-import { Button } from '@shared-components';
+import { Button, CustomerCard } from '@shared-components';
 import { Metadata } from 'next';
 import { Carousel } from '@shared-components/Carousel';
-import { Advertise, Difference, Difficult, Foundation, Newspaper } from '../san-pham/_components';
-import { CustomerCard } from '@shared-components/Card/CustomerCard/impl';
+import { Advertise, Difference, Difficult, Foundation, Newspaper } from './_components';
+import { customerCards } from '@constants/mockData';
+
 
 
 export const metadata: Metadata = {
@@ -26,7 +27,15 @@ export default function page() {
             <Advertise />
             <Foundation />
             <Difference />
-            <Carousel uniqueID={''} items={[]} ItemComponent={CustomerCard} shape={''} />
+            <Carousel
+                uniqueID="customer"
+                items={customerCards}
+                ItemComponent={CustomerCard}
+                shape="retangle"
+                title="KHÁCH HÀNG CỦA CHÚNG TÔI"
+                isButton={false}
+            />
+            <Carousel uniqueID={''} items={[]} ItemComponent={CustomerCard} shape={'circle'} isButton={false} />
             <Newspaper />
         </section>
     )

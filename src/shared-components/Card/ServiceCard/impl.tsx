@@ -1,9 +1,10 @@
+
 import { Button } from '@shared-components/Button';
 import Image from 'next/image';
 import './styles.sass';
 import Link from 'next/link';
 import React, { forwardRef } from 'react';
-import { ServiceCardItem, ServiceCardType } from './types';
+import { ServiceCardItem } from './types';
 
 export const ServiceCard = forwardRef<HTMLDivElement, { item: ServiceCardItem, className?: string }>(
 
@@ -31,6 +32,6 @@ export const ServiceCard = forwardRef<HTMLDivElement, { item: ServiceCardItem, c
 				</div>
 
 			</div>
+
 		);
-	},
-);
+	});

@@ -1,10 +1,10 @@
 @import '../../../styles/mixins/mixins'
 @keyframes slideIn
     from
-        transform: translateY(-100%) // Bắt đầu từ trên cùng
+        transform: translateY(-100%) 
 
     to
-        transform: translateY(0) // Kết thúc ở vị trí ban đầu
+        transform: translateY(0)
 @keyframes scaleUp
     from
         transform: scale(0.8)
@@ -15,7 +15,7 @@
     position: relative
     transition: transform 0.3s ease
     border-bottom: 1px solid rgba(194, 194, 194, 0.2)
-
+    
     &.sticky
         position: fixed
         top: 0
@@ -28,12 +28,9 @@
         animation: slideIn 0.3s ease forwards
 .navbar
     display: flex
-    width: 100%
     align-items: center
     margin: auto
-    flex-wrap: nowrap
     justify-content: space-between
-    position: relative
     z-index: 1001
 
     @include container
@@ -45,7 +42,7 @@
     &-logo
         margin-right: 30px
         transition: transform 0.3s ease
-    & ul
+    ul
         display: flex
         font-weight: 600
         justify-content: flex-start
@@ -53,11 +50,9 @@
         flex-wrap: wrap
         gap: 20px
         align-items: center
-
-        & li
-            position: relative
+        li
             display: flex
-
+            position: relative
             img
                 margin-top: 5px
 
@@ -87,13 +82,13 @@
                 width: 100%
                 padding: 10px 0
                 border-bottom: 1px solid #afafaf
-
                 & a
                     padding-right: 0
                     color: #727272
                     font-weight: 400
                     &:hover
                         color: #2c2c2c
+        
 
     @media (max-width: 849px)
         &-hamburger
