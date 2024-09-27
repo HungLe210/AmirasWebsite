@@ -1,11 +1,13 @@
 import React from 'react'
 import './styles.sass';
-import { Button } from '@shared-components';
+import { Button, CustomerCard } from '@shared-components';
 import { Metadata } from 'next';
 import Image from 'next/image'
 import Link from 'next/link';
 import { Carousel } from '@shared-components/Carousel';
 import { Advertise, Difference, Difficult, Foundation, Newspaper } from './_components';
+import { customerCards } from '@constants/mockData';
+
 
 export const metadata: Metadata = {
     title: 'Giải pháp'
@@ -26,7 +28,14 @@ const page = () => {
             <Advertise />
             <Foundation />
             <Difference />
-            <Carousel />
+            <Carousel
+				uniqueID="customer"
+				items={customerCards}
+				ItemComponent={CustomerCard}
+				shape="retangle"
+				title="KHÁCH HÀNG CỦA CHÚNG TÔI"
+				isButton={false}
+			/>
             <Newspaper />
         </section>
     )

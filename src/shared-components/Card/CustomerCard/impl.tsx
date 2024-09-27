@@ -5,7 +5,7 @@ import React from 'react';
 import './styles.sass';
 import { CustomerCardType } from './types';
 
-const CustomerCard : React.FC<{ item: CustomerCardType }> = ({
+export const CustomerCard : React.FC<{ item: CustomerCardType }> = ({
 	item
 }) => {
 	return (
@@ -28,4 +28,3 @@ const CustomerCard : React.FC<{ item: CustomerCardType }> = ({
 	);
 };
 
-export default CustomerCard;

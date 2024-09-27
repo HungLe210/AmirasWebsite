@@ -1,29 +1,30 @@
 import React from 'react';
-import "./styles.sass"
-import { ServiceCard } from '@shared-components/Card/ServiceCard';
-const page = () => {
-	const data: ServiceCardType[] = [
-		{
-			category: {
-				name: 'Tư vấn Loyalty Marketing',
-				url: '#',
-			},
-			items: [
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-				{
-					detailUrl: '#',
-					title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
-					img: '/assets/Service/Tu-van-Loyalty.png',
-				},
-			],
-		},
-		
-	];
+import './styles.sass';
+import { ServiceCard, ServiceCardItem, ServiceCardType } from '@shared-components/Card';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+	title: 'Tư vấn Loyalty Marketing',
+};
+
+const page = () => {
+	const data: ServiceCardItem[] = [
+		{
+			detailUrl: '#',
+			title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+			img: '/assets/Service/Tu-van-Loyalty.png',
+		},
+		{
+			detailUrl: '#',
+			title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+			img: '/assets/Service/Tu-van-Loyalty.png',
+		},
+		{
+			detailUrl: '#',
+			title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
+			img: '/assets/Service/Tu-van-Loyalty.png',
+		},
+	];
 	return (
 		<section className="service-section">
 			<div className="service-section-header">
@@ -34,14 +35,11 @@ const page = () => {
 
 			<section>
 				<div className="container">
-					{
-						data.map((item,index)=>{
-							return (
-								< ServiceCard key={index} category={item.category} items={item.items}></ServiceCard>
-							)
-						})
-					}
-					
+					<div className="service-card-list">
+						{data.map((item, index) => {
+							return <ServiceCard key={index} item={item}></ServiceCard>;
+						})}
+					</div>
 				</div>
 			</section>
 		</section>

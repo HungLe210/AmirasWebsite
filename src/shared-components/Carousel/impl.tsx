@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@shared-components';
 import { CarouselProps } from './types';
 
-export const Carousel = <T,>({ ItemComponent, items, shape, uniqueID }: CarouselProps<T>) => {
+export const Carousel = <T,>({ ItemComponent, items, shape, uniqueID, title, subtitle,isButton }: CarouselProps<T>) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const totalPages = 3;
 
@@ -20,7 +20,7 @@ export const Carousel = <T,>({ ItemComponent, items, shape, uniqueID }: Carousel
 
 	useEffect(() => {
 		let group = document.querySelector<HTMLDivElement>(`#carousel-list-wrapper-${uniqueID}`);
-	
+		
 		if (group) {
 			group.style.transform = `translateX(-${currentIndex * group.offsetWidth}px)`; // Adjust based on the current index
 			
@@ -29,8 +29,8 @@ export const Carousel = <T,>({ ItemComponent, items, shape, uniqueID }: Carousel
 
 	return (
 		<section className="customer">
-			<h2>KHÁCH HÀNG CỦA CHÚNG TÔI</h2>
-			<h3>Hàng trăm Doanh nghiệp tin dùng giải pháp Smart Loyalty</h3>
+			<h2>{title}</h2>
+			<h3>{subtitle}</h3>
 			<div className="carousel">
 				<div className="carousel-list">
 					<div className={`carousel-list-wrapper`} id={`carousel-list-wrapper-${uniqueID}`}>
@@ -63,7 +63,10 @@ export const Carousel = <T,>({ ItemComponent, items, shape, uniqueID }: Carousel
 						<span key={index} className={`dot ${currentIndex === index ? 'active' : ''}`}></span>
 					))}
 				</div>
-				<Button hasShadow hasSpecialHover>
+
+				
+				{
+					isButton? <Button hasShadow hasSpecialHover>
 					<Link
 						href="#sign_up_form"
 						style={{ color: 'white', textDecoration: 'none' }}
@@ -71,7 +74,9 @@ export const Carousel = <T,>({ ItemComponent, items, shape, uniqueID }: Carousel
 					>
 						Đăng ký tư vấn
 					</Link>
-				</Button>
+					</Button>:null
+				}
+				
 			</div>
 		</section>
 	);
