@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.sass';
 import { ServiceCard, ServiceCardItem, ServiceCardType } from '@shared-components/Card';
 import { Metadata } from 'next';
+import { SmallBanner } from '@shared-components/Banner/SmallBanner';
 
 export const metadata: Metadata = {
 	title: 'Tư vấn Loyalty Marketing',
@@ -27,11 +28,8 @@ const page = () => {
 	];
 	return (
 		<section className="service-section">
-			<div className="service-section-header">
-				<div className="service-section-header-content">
-					<h1 className="service-section-title">Tư vấn Loyalty Marketing</h1>
-				</div>
-			</div>
+
+			<SmallBanner title='Tư vấn Loyalty Marketing' />
 
 			<section>
 				<div className="container">

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { SearchHeader } from './SearchHeader';
 import { Navbar } from './Navbar';
 
-export const Header = () => {
+export function Header() {
     return (
         <section className='header-section' >
             <SearchHeader />

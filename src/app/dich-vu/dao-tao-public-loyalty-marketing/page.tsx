@@ -1,6 +1,7 @@
 import React from 'react';
 import '../tu-van-loyalty-marketing/styles.sass';
 import { ServiceCard, ServiceCardItem } from '@shared-components/Card';
+import { SmallBanner } from '@shared-components/Banner/SmallBanner';
 const page = () => {
 	const data: ServiceCardItem[] = [
 		{
@@ -21,12 +22,8 @@ const page = () => {
 	];
 	return (
 		<section className="service-section">
-			<div className="service-section-header">
-				<div className="service-section-header-content">
-					<h1 className="service-section-title">Đào tạo Public Loyalty Marketing</h1>
-				</div>
-			</div>
-
+			<SmallBanner title='Đào tạo Public Loyalty Marketing'/>
+			
 			<section>
 				<div className="container">
 					<div className="service-card-list">

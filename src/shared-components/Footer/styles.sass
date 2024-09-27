@@ -4,6 +4,7 @@ footer
   color: white
   background-color: rgb(21, 43, 79)
   padding-top: 50px
+  text-align: left
   img
     width: 141px
     height: auto
@@ -20,12 +21,22 @@ footer
   &-content
     display: flex
     flex-wrap: wrap
-    margin-left: auto
-    margin-right: auto
+    margin: 20px auto
+    gap: 20px
     width: 100%
+  &-item
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 15px
+    &:last-child
+      flex: 2
   &-sub
     display: flex
     flex-direction: row
+    gap: 10px
+    &-item
+      flex: 1
 
 .copyright
   background-color: #5b5b5b

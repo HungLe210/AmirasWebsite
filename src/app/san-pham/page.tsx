@@ -12,7 +12,7 @@ import { customerCards } from '@constants/mockData';
 export const metadata: Metadata = {
     title: 'Sản phẩm'
 }
-const page = () => {
+export default function page () {
     return (
         <section className='product'>
             <section className='product-header'>
@@ -41,4 +41,3 @@ const page = () => {
     )
 }
 
-export default page

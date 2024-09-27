@@ -55,23 +55,23 @@ export function NewEvent() {
 		};
 	}, []);
 
-	return (
-		<section className="event">
-			<div className="event-board">
-				<h2>SỰ KIỆN MỚI NHẤT</h2>
-				<div className="event-list">
-					{data.map((item, index) => {
-						return (
-							<ServiceCard
-								key={index}
-								item={item}
-								ref={(el) => setRef(el, index)}
-								className={`service-card ${renderedCards.includes(index) ? 'fade-in' : ''}`}
-							/>
-						);
-					})}
-				</div>
-			</div>
-		</section>
-	);
+    return (
+        <section className='new-event'>
+            <div className='new-event-board'>
+                <h2>SỰ KIỆN MỚI NHẤT</h2>
+                <div className='new-event-list'>
+                    {data.map((item, index) => {
+                        return (
+                            <ServiceCard
+                                key={index}
+                                item={item}
+                                ref={(el) => setRef(el, index)}
+                                className={`service-card ${renderedCards.includes(index) ? 'fade-in' : ''}`}
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
+    );
 }

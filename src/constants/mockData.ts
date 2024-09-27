@@ -147,3 +147,27 @@ export const blogCards: CardProps[] = [
 	// 	title:"Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
 	// }
 ];
+// label: 'Giải pháp',
+// href: '/giai-phap',
+// submenu: [
+//     {
+//         category: 'Theo lĩnh vực',
+//         subtitle: 'Đa dạng ngành nghề lĩnh vực',
+//         items: [
+//             { label: 'Tài chính - Ngân hàng', href: '/giai-phap/nganh-hang-1' },
+//             { label: 'Bán lẻ', href: '/giai-phap/nganh-hang-2' },
+//             { label: 'Sức khỏe làm đẹp', href: '/giai-phap/nganh-hang-3' },
+//             { label: 'Du lịch khách sạn', href: '/giai-phap/nganh-hang-4' },
+//             { label: 'Dịch vụ ăn uống (FnB)', href: '/giai-phap/nganh-hang-5' },
+//             { label: 'B2B', href: '/giai-phap/nganh-hang-6' },
+//         ],
+//     },
+//     {
+//         category: 'Theo quy mô',
+//         subtitle: 'Phù hợp mọi quy mô doanh nghiệp',
+//         items: [
+//             { label: 'Doanh nghiệp vừa - nhỏ', href: '/giai-phap/quy-mo-nho' },
+//             { label: 'Tập đoàn - DN lớn', href: '/giai-phap/quy-mo-lon' },
+//         ],
+//     },
+// ],

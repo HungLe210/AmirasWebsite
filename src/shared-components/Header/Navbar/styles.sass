@@ -11,7 +11,6 @@
 
     to
         transform: scale(1)
-
 .nav
     position: relative
     transition: transform 0.3s ease
@@ -27,7 +26,6 @@
         background-color: rgba(255, 255, 255, 0.9)
         z-index: 1000
         animation: slideIn 0.3s ease forwards
-
 .navbar
     display: flex
     width: 100%
@@ -35,8 +33,14 @@
     margin: auto
     flex-wrap: nowrap
     justify-content: space-between
+    position: relative
+    z-index: 1001
 
     @include container
+
+    &-hamburger
+        display: none
+        cursor: pointer
 
     &-logo
         margin-right: 30px
@@ -91,8 +95,78 @@
                     &:hover
                         color: #2c2c2c
 
-/* header infor */
+    @media (max-width: 849px)
+        &-hamburger
+            display: block
+            margin-left: 0
+        &-btn,
+        &-item,
+        ul
+            display: none
+        &-logo
+            margin: 0 auto
 
-@media screen and (max-width: 1024px)
-    .header
-        width: 99%
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 999
+    transition: opacity 0.3s ease
+
+.sidebar
+    position: fixed
+    top: 0
+    right: 0
+    height: 100vh
+    width: 0
+    background-color: #fff
+    z-index: 1000
+    transition: width 0.3s ease, padding 0.3s ease
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    padding: 0
+
+    &.open
+        width: 30%
+        padding: 20px
+        overflow-y: auto
+
+    .sidebar-items
+        list-style: none
+        padding: 0
+        margin: 0
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+    .sidebar-item
+        padding: 15px 0
+        text-decoration: none
+        color: #333
+        font-weight: bold
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        display: block
+        position: relative
+
+        &:hover
+            color: #000
+
+    .sidebar-item-submenu
+        list-style: none
+        padding: 10px 20px
+        display: none
+        & a
+            color: black
+
+    li:hover .sidebar-item-submenu
+        display: inline-block
+        display: flex
+        flex-direction: column
+        position: absolute
+        left: 50px
+        top: 100%

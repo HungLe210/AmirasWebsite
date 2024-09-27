@@ -11,7 +11,7 @@ export const ServiceCard = forwardRef<
 	{ item: ServiceCardItem; className?: string }
 >(({ item, className }, ref) => {
 	return (
-		<div className={`service-card`} ref={ref}>
+		<div className={`${className}`} ref={ref}>
 			<div className="service-card-content">
 				<div className="box-zoom-out">
 					<Image
