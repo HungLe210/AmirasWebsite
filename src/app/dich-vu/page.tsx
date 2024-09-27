@@ -6,6 +6,7 @@ import { ServiceCard } from '@shared-components/Card/ServiceCard';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SmallBanner } from '@shared-components/Banner/SmallBanner';
+import { ServiceCardType } from '@shared-components/Card/ServiceCard/types';
 
 export const metadata: Metadata = {
 	title: 'Dịch vụ',
@@ -78,18 +79,18 @@ const data: ServiceCardType[] = [
 				detailUrl: '#',
 				title: 'Tư vấn chiến lược, thiết kế chương trình loyalty hiệu quả cho doanh nghiệp',
 				img: '/assets/Service/Tu-van-Loyalty.png',
-			}
+			},
 		],
 	},
 ];
 
 const BannerData = {
 	title: 'Dịch vụ',
-	content: 'Cung cấp giải pháp chương trình Loyalty toàn diện để hỗ trợ doanh nghiệp hoàn thành các mục tiêu về doanh thu, truyền thông và trải nghiệm khách hàng.'
-}
+	content:
+		'Cung cấp giải pháp chương trình Loyalty toàn diện để hỗ trợ doanh nghiệp hoàn thành các mục tiêu về doanh thu, truyền thông và trải nghiệm khách hàng.',
+};
 
 const page = () => {
-
 	return (
 		<section className="service">
 			<SmallBanner title={BannerData.title} content={BannerData.content} />
@@ -117,7 +118,14 @@ const page = () => {
 										</Button>
 									</div>
 								</div>
-								<ServiceCard category={item.category} items={item.items}></ServiceCard>
+
+								{
+									<div className="service-card-list">
+										{item.items.map((service, index) => {
+											return <ServiceCard key={index} item={service}></ServiceCard>;
+										})}
+									</div>
+								}
 							</div>
 						);
 					})}

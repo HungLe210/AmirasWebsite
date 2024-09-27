@@ -3,23 +3,11 @@ import Link from 'next/link';
 import './styles.sass';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import CustomerCard from '@shared-components/Card/CustomerCard/impl';
 import { Button } from '@shared-components';
-import { CustomerCardType } from '@shared-components/Card/CustomerCard/types';
+import { CarouselProps } from './types';
 
-export const Carousel = ({
-	uniqueID,
-	shape = 'retangle',
-}: {
-	uniqueID: string;
-	shape?: string;
-}) => {
+export const Carousel = <T,>({ ItemComponent, items, shape, uniqueID }: CarouselProps<T>) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
-	let cardButton = 'đọc thêm';
-	let cardDescription =
-		'Cung cấp sản phẩm cho vay tiêu dùng đa dạng như xe máy, ô tô, xe tải nhẹ, xe điện,hàng điện máy, điện thoại,...';
-	let cardImage = '/assets/Home/hd-sai-gon-jpg.webp';
-	let cardTitle = 'HD SAIGON';
 	const totalPages = 3;
 
 	const handleNext = () => {
@@ -32,40 +20,13 @@ export const Carousel = ({
 
 	useEffect(() => {
 		let group = document.querySelector<HTMLDivElement>(`#carousel-list-wrapper-${uniqueID}`);
-		console.log(group);
+	
 		if (group) {
 			group.style.transform = `translateX(-${currentIndex * group.offsetWidth}px)`; // Adjust based on the current index
-			console.log(group.style.transform);
+			
 		}
 	}, [currentIndex]);
 
-	const customerCards: CustomerCardType[] = [
-		{
-			cardButton: cardButton,
-			cardDescription: cardDescription,
-			cardImage: cardImage,
-			cardTitle: cardTitle,
-		},
-		{
-			cardButton: cardButton,
-			cardDescription: cardDescription,
-			cardImage: cardImage,
-			cardTitle: cardTitle,
-		},
-		{
-			cardButton: cardButton,
-			cardDescription: cardDescription,
-			cardImage: cardImage,
-			cardTitle: cardTitle,
-		},
-		{
-			cardButton: cardButton,
-			cardDescription: cardDescription,
-			cardImage: cardImage,
-			cardTitle: cardTitle,
-		},
-		
-	];
 	return (
 		<section className="customer">
 			<h2>KHÁCH HÀNG CỦA CHÚNG TÔI</h2>
@@ -76,16 +37,8 @@ export const Carousel = ({
 						{Array.from({ length: 3 }, (item, index1) => {
 							return (
 								<div className="carousel-group" key={index1}>
-									{customerCards.map((item, index) => {
-										return (
-											<CustomerCard
-												key={index}
-												cardButton={item.cardButton}
-												cardDescription={item.cardDescription}
-												cardImage={item.cardImage}
-												cardTitle={item.cardTitle}
-											></CustomerCard>
-										);
+									{items.map((card, index) => {
+										return <ItemComponent key={index} item={card}></ItemComponent>;
 									})}
 								</div>
 							);
