@@ -6,6 +6,13 @@
     font-size: 13.5px
     padding: 2px
 
+    &-title
+        display: none // Ẩn tiêu đề mặc định
+        color: white // Màu chữ
+
+        font-size: 1rem
+        margin: 10px 0 // Margin cho tiêu đề
+
     &-item
         color: white
         text-decoration: none
@@ -23,3 +30,14 @@
         & img
             width: 24px
             height: 24px
+
+    @media (max-width: 849px)
+        & ul
+            display: none // Ẩn tất cả các phần tử trong ul
+
+        &-title
+            display: block // Hiện dòng chữ "Smart Loyalty"
+            color: white // Bạn có thể tùy chỉnh màu sắc
+            text-align: center // Căn giữa nếu cần
+            font-size: 24px // Tùy chỉnh kích thước chữ
+            margin: 10px 0 // Thêm một chút margin

@@ -76,10 +76,10 @@ export function NewEvent() {
     }, []);
 
     return (
-        <section className='event'>
-            <div className='event-board'>
+        <section className='new-event'>
+            <div className='new-event-board'>
                 <h2>SỰ KIỆN MỚI NHẤT</h2>
-                <div className='event-list'>
+                <div className='new-event-list'>
                     {data.map((item, index) => {
                         return (
                             <ServiceCard

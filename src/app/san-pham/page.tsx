@@ -11,7 +11,7 @@ import { Advertise, Difference, Difficult, Foundation, Newspaper } from './_comp
 export const metadata: Metadata = {
     title: 'Sản phẩm'
 }
-const page = () => {
+export default function page () {
     return (
         <section className='product'>
             <section className='product-header'>
@@ -27,10 +27,9 @@ const page = () => {
             <Advertise />
             <Foundation />
             <Difference />
-            <Carousel />
+            <Carousel uniqueID={''} />
             <Newspaper />
         </section>
     )
 }
 
-export default page

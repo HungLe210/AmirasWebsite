@@ -10,3 +10,31 @@
             justify-content: center
 
             @include container
+    &-list
+
+        flex: 2
+        text-align: left
+        &:first-child,
+        &:last-child
+            flex: 1
+            text-align: left
+    &-box
+        display: flex
+        flex-direction: column
+        gap: 15px
+        padding: 20px
+        border-radius: 5%
+        margin-bottom: 20px
+        opacity: 0 // Bắt đầu với độ mờ 0
+        transform: translateX(-20px) // Đẩy sang trái một chút
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out // Hiệu ứng chuyển tiếp
+
+        &.fade-in
+            opacity: 1 // Độ mờ 1 khi vào viewport
+            transform: translateX(0) // Trở về vị trí ban đầu
+
+        &:hover
+            background: #ffcccc
+        &-header
+            display: flex
+            gap: 10px

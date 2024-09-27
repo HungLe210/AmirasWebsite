@@ -4,6 +4,35 @@
 //     align-items: center
 //     background-image: url('/assets/Product/Banner-product.png')
 @import '../../styles/mixins/mixins'
-.product
-    &-header
-        background-image: url('/assets/Product/Banner-product.png')
+
+.about
+
+    text-align: left
+    span
+        color: var(--orange-color)
+        font-weight: thin
+    strong
+        color: var(--orange-color)
+        font-weight: bold
+    &-board
+        margin-top: 50px
+        display: flex
+        gap: 30px
+        @include container
+
+    &-description
+        display: flex
+        flex-direction: column
+        gap: 15px
+
+    button
+        display: flex
+        transition: font-size 0.2s
+    & button:hover
+        font-size: 0.8rem
+        & .arrow
+            opacity: 1
+.arrow
+    opacity: 0
+    transition: opacity 0.2s
+    margin-left: 8px

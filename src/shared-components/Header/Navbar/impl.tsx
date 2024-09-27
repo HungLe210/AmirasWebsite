@@ -5,10 +5,11 @@ import './styles.sass';
 import { Button } from '@shared-components';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosMenu } from "react-icons/io";
 
 export function Navbar() {
     const [isSticky, setIsSticky] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const stickyThreshold = 100;
 
     useEffect(() => {
@@ -33,7 +34,13 @@ export function Navbar() {
                 <div className='navbar-logo'>
                     <Image src='/assets/logo-black-text.png' alt='' width={153} height={80} style={{ padding: 10 }} />
                 </div>
-                <ul>
+                <div className='navbar-hamburger' onClick={() => {
+                    console.log(isMenuOpen);
+                    setIsMenuOpen(!isMenuOpen)
+                }}>
+                    <IoIosMenu size={30} />
+                </div>
+                <ul className={`navbar-items ${isMenuOpen ? 'open' : ''}`}>
                     {navbarData.map((item, index) => (
                         <li key={index}>
                             <Link href={item.href} className='navbar-item'>
@@ -51,10 +58,35 @@ export function Navbar() {
                         </li>
                     ))}
                 </ul>
-                <div>
+
+                {isMenuOpen && <div className="overlay" onClick={() => setIsMenuOpen(false)}></div>}
+
+                <div className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
+                    <ul className="sidebar-items">
+                        {navbarData.map((item, index) => (
+                            <li key={index}>
+                                <Link href={item.href} className="sidebar-item">
+                                    {item.label} {item.submenu.length > 0 && <IoIosArrowDown />}
+                                </Link>
+                                {item.submenu.length > 0 && (
+                                    <ul className="sidebar-item-submenu">
+                                        {item.submenu.map((subItem, subIndex) => (
+                                            <li key={subIndex}>
+                                                <Link href={subItem.href}>{subItem.label}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className='navbar-btn'>
                     <Link href='#sign_up_form'><Button>Tư vấn</Button></Link>
                 </div>
             </div>
         </section>
     );
 }
+
+

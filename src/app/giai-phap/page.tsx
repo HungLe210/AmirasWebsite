@@ -5,12 +5,12 @@ import { Metadata } from 'next';
 import Image from 'next/image'
 import Link from 'next/link';
 import { Carousel } from '@shared-components/Carousel';
-import { Advertise, Difference, Difficult, Foundation, Newspaper } from './_components';
+import { Advertise, Difference, Difficult, Foundation, Newspaper } from '../san-pham/_components';
 
 export const metadata: Metadata = {
     title: 'Giải pháp'
 }
-const page = () => {
+export default function page ()  {
     return (
         <section className='product'>
             <section className='product-header'>
@@ -26,10 +26,8 @@ const page = () => {
             <Advertise />
             <Foundation />
             <Difference />
-            <Carousel />
+            <Carousel uniqueID={''} />
             <Newspaper />
         </section>
     )
 }
-
-export default page

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./styles.sass"
 import { ServiceCard } from '@shared-components/Card/ServiceCard';
+import { SmallBanner } from '@shared-components/Banner/SmallBanner';
 const page = () => {
 	const data: ServiceCardType[] = [
 		{
@@ -21,27 +22,24 @@ const page = () => {
 				},
 			],
 		},
-		
+
 	];
 
 	return (
 		<section className="service-section">
-			<div className="service-section-header">
-				<div className="service-section-header-content">
-					<h1 className="service-section-title">Tư vấn Loyalty Marketing</h1>
-				</div>
-			</div>
+
+			<SmallBanner title='Tư vấn Loyalty Marketing' />
 
 			<section>
 				<div className="container">
 					{
-						data.map((item,index)=>{
+						data.map((item, index) => {
 							return (
 								< ServiceCard key={index} category={item.category} items={item.items}></ServiceCard>
 							)
 						})
 					}
-					
+
 				</div>
 			</section>
 		</section>

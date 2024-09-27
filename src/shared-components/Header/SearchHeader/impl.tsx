@@ -4,17 +4,19 @@ import { Button } from '@shared-components';
 import asset from '../../../../public/assets/asset';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
-export const SearchHeader = () => {
+export function SearchHeader() {
     return (
         < div className='header' >
             <div className='container'>
                 {/* first-header__ul */}
+                <span className='header-title'>Smart Loyalty giải pháp trọn gói</span>
                 <ul>
                     <li>
                         <Link className='header-item' href='/'>
                             {/* header */}
-                            <Image src={asset.search_icon.src} alt='' width={16.19} height={16} />
+                            <FaMagnifyingGlass style={{ color: 'white' }} />
                         </Link>
                     </li>
                     <li>

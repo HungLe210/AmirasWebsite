@@ -24,7 +24,7 @@ export function Product() {
             <Advertise />
             <Foundation />
             <Difference />
-            <Carousel />
+            <Carousel uniqueID={''} />
             <Newspaper />
         </section>
     )
