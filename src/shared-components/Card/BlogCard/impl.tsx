@@ -1,15 +1,26 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import './styles.sass';
 import { CardProps } from './types';
 
-export const BlogCard:React.FC<{item: CardProps}> = ({item}) =>{
+export function BlogCard({ item }: { item: CardProps }) {
 	return (
 		<div className='blog-card'>
 			<div className='blog-card-image'>
-				<Image src={item.img} height={100} width={200} alt='blog-card Image' />
+				{item.img ? (
+					<Image
+						src={item.img}
+						height={150}
+						width={300}
+						alt='Blog Image'
+						objectFit="cover"
+					/>
+				) : (
+					<div className="blog-card-placeholder">
+						<p>No Image Available</p>
+					</div>
+				)}
 			</div>
 			<div className='blog-card-content'>
 				<p className='blog-card-category'>{item.category}</p>
@@ -19,4 +30,4 @@ export const BlogCard:React.FC<{item: CardProps}> = ({item}) =>{
 			</div>
 		</div>
 	);
-};
+}

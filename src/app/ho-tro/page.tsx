@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@shared-components';
 import { Metadata } from 'next';
 import './styles.sass';
 import { SmallBanner } from '@shared-components/Banner/SmallBanner';
@@ -8,7 +7,7 @@ import { LoginForm } from '../../shared-components/LoginForm';
 
 export const metadata: Metadata = {
     title: 'Hỗ trợ'
-}
+};
 export default function page() {
     return (
         <section className='support'>
@@ -47,5 +46,5 @@ export default function page() {
             </div>
         </section>
     )
-}
+};
 

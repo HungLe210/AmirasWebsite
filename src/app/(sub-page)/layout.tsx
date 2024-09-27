@@ -1,5 +1,5 @@
-import RootLayout from 'app/layout'
-import './styles.sass'
+import RootLayout from 'app/layout';
+import './styles.sass';
 import '@styles/globals.sass';
 import '@styles/color.sass';
 
@@ -9,11 +9,11 @@ export default function SubLayout({
     children: React.ReactNode
 }) {
     return (
-        <RootLayout showNewsletter={false}>
+        <RootLayout >
             <section className='sup_layout'>
                 {children}
             </section>
         </RootLayout>
 
-    )
-}
+    );
+};

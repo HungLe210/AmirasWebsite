@@ -41,5 +41,5 @@ export function BlogSideBar() {
 
             </ul>
         </div>
-    )
-}
+    );
+};

@@ -1,9 +1,6 @@
-import { Button } from '@shared-components'
-import Link from 'next/link'
-import React from 'react'
-import Image from 'next/image';
+import { Button } from '@shared-components';
+import React from 'react';
 import './styles.sass';
-import { solutionData as mockData } from 'constants/mockData';
 import { IoIosArrowDown } from 'react-icons/io';
 export function Advertise() {
     //const [solutionData, setSolutionData] = useState(mockData);

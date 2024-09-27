@@ -1,6 +1,6 @@
-import { Button } from '@shared-components'
-import Link from 'next/link'
-import React from 'react'
+import { Button } from '@shared-components';
+import Link from 'next/link';
+import React from 'react';
 import Image from 'next/image';
 import './styles.sass';
 import { FaRegCheckCircle } from "react-icons/fa";
@@ -118,6 +118,6 @@ export function Fundamental() {
                 </div>
             </div>
         </section >
-    )
-}
+    );
+};
 

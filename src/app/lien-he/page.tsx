@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { SmallBanner } from '@shared-components/Banner/SmallBanner';
 
 
-const page = () => {
+export default function page() {
     return (
         <section className='contact'>
             <SmallBanner title='Liên hệ' />
@@ -39,7 +39,5 @@ const page = () => {
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29792.698028145514!2d105.78461681049458!3d21.029194495893663!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba48b091fcf%3A0x61dee8f403bdfa7e!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gxJDhuqZVIFTGryBWw4AgUEjDgVQgVFJJ4buCTiBDw5RORyBOR0jhu4YgU01BUlQgTE9ZQUxUWSBRVeG7kEMgVOG6vg!5e0!3m2!1svi!2s!4v1688020847291!5m2!1svi!2s" width="100%" height="350" ></iframe>
             </section>
         </section>
-    )
-}
-
-export default page;
+    );
+};

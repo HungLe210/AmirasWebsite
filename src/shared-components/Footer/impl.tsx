@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.sass';
+import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -16,7 +17,7 @@ export function Footer() {
                         <Link href='tel:02466632844'><strong>Điện thoại</strong>:0246 632 844</Link>
                         <Link href='tel:0983399866'><strong>Hotline</strong>:0983 399 866</Link>
                         <Link href='mailto:info@smartloyalty.vn'><strong>Email</strong>:info@smartloyalty.vn</Link>
-
+                        <div className='footer-icon'><FaFacebook /><FaLinkedin /><FaYoutube /></div>
 
                     </div>
 

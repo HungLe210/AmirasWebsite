@@ -1,14 +1,14 @@
 
 import { LoginForm } from '@shared-components/LoginForm';
-import { Metadata } from 'next'
+import { Metadata } from 'next';
 import Link from 'next/link';
-import React from 'react'
+import React from 'react';
 
 
 
 export const metadata: Metadata = {
     title: 'Tạo tài khoản'
-}
+};
 
 
 export default function Instruction() {

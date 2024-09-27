@@ -1,6 +1,6 @@
-import { Button } from '@shared-components'
-import Link from 'next/link'
-import React from 'react'
+import { Button } from '@shared-components';
+import Link from 'next/link';
+import React from 'react';
 import Image from 'next/image';
 import './styles.sass';
 
@@ -21,6 +21,6 @@ export function HeaderBanner() {
                 <Image src='/assets/Banner-1-home-full.png' alt='' width={1118.33} height={594.31} />
             </div >
         </section>
-    )
-}
+    );
+};
 

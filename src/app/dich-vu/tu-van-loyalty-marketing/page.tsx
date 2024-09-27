@@ -2,7 +2,8 @@ import React from 'react';
 import "./styles.sass"
 import { ServiceCard } from '@shared-components/Card/ServiceCard';
 import { SmallBanner } from '@shared-components/Banner/SmallBanner';
-const page = () => {
+import { ServiceCardType } from '@shared-components/Card/ServiceCard/types';
+export default function page() {
 	const data: ServiceCardType[] = [
 		{
 			category: {
@@ -45,5 +46,3 @@ const page = () => {
 		</section>
 	);
 };
-
-export default page;

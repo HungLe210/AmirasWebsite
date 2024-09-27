@@ -1,9 +1,6 @@
-import { Button } from '@shared-components'
-import Link from 'next/link'
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
 import './styles.sass';
-import { solutionData as mockData } from 'constants/mockData';
 export function Difficult() {
     //const [solutionData, setSolutionData] = useState(mockData);
     // const solutionData = mockData;

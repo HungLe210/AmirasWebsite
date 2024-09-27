@@ -1,6 +1,5 @@
-import { SmallBanner } from '@shared-components/Banner/SmallBanner'
-import React from 'react'
-
+import { SmallBanner } from '@shared-components/Banner/SmallBanner';
+import React from 'react';
 export default function page() {
     return (
         <section>
@@ -9,4 +8,4 @@ export default function page() {
         </section>
 
     )
-}
+};

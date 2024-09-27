@@ -4,6 +4,7 @@ import './styles.sass';
 import Image from 'next/image';
 import { SignUpCard } from '@shared-components/Card';
 import { FaRegCheckCircle } from 'react-icons/fa';
+import { ScrollTopButton } from '@shared-components/ScrollTopButton';
 
 export function Newsletter() {
     const [isVisible, setIsVisible] = useState(false); // State to control visibility

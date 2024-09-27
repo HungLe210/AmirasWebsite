@@ -1,4 +1,5 @@
 export type ServiceCardItem = {
+
     img: string,
     title: string,
     detailUrl: string

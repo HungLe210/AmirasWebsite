@@ -1,35 +1,39 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { navbarData } from '@constants/mockData';
 import './styles.sass';
 import { Button } from '@shared-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoIosArrowDown, IoIosMenu } from "react-icons/io";
+import { useScroll } from '@hooks';
 
 export function Navbar() {
-    const [isSticky, setIsSticky] = useState(false);
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const stickyThreshold = 100;
+    const attribute = useScroll(100, '');
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = window.scrollY;
-            if (scrollY > stickyThreshold && !isSticky) {
-                setIsSticky(true);
-            } else if (scrollY <= stickyThreshold && isSticky) {
-                setIsSticky(false);
-            }
-        };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [isSticky]); // Thêm isSticky vào dependency array
+    // const [isSticky, setIsSticky] = useState(false);
+    // const stickyThreshold = 100;
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollY = window.scrollY;
+    //         if (scrollY > stickyThreshold && !isSticky) {
+    //             setIsSticky(true);
+    //         } else if (scrollY <= stickyThreshold && isSticky) {
+    //             setIsSticky(false);
+    //         }
+    //     };
+
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, [isSticky]); // Thêm isSticky vào dependency array
 
     return (
-        <section className={`nav ${isSticky ? 'sticky' : ''} `}>
+        <section className={`nav ${attribute ? 'sticky' : ''} `}>
             <div className='navbar'>
                 <div className='navbar-logo'>
                     <Image src='/assets/logo-black-text.png' alt='' width={153} height={80} style={{ padding: 10 }} />

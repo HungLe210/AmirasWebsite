@@ -1,9 +1,7 @@
-import { Button } from '@shared-components'
-import Link from 'next/link'
-import React from 'react'
+import { Button } from '@shared-components';
+import React from 'react';
 import Image from 'next/image';
 import './styles.sass';
-import { solutionData as mockData } from 'constants/mockData';
 export function Foundation() {
     //const [solutionData, setSolutionData] = useState(mockData);
     // const solutionData = mockData;
@@ -16,7 +14,7 @@ export function Foundation() {
                 </div>
             </section>
             <section className='foundation_1'>
-                <div className="box">
+                <div className='box'>
                     <div className='box-img'>
                         <Image
                             src='/assets/Home/CRM_2.png'
@@ -34,7 +32,7 @@ export function Foundation() {
             </section>
             <section className='foundation_2'>
 
-                <div className="box">
+                <div className='box'>
 
                     <div className='box-details'>
                         <div>
@@ -55,7 +53,7 @@ export function Foundation() {
             </section>
             <section className='foundation_3'>
 
-                <div className="box">
+                <div className='box'>
                     <div className='box-img'>
                         <Image
                             src='/assets/Home/CRM_2.png'

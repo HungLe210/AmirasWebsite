@@ -1,11 +1,6 @@
 'use client';
-import { Button } from '@shared-components';
-import Link from 'next/link';
 import React, { useRef } from 'react';
-import Image from 'next/image';
 import './styles.sass';
-import { BlogCard } from '@shared-components/Card';
-
 export function UsefulBlog() {
     const scrollRef = useRef<HTMLDivElement | null>(null); // Khai báo kiểu cho scrollRef
     const scrollLeft = () => {

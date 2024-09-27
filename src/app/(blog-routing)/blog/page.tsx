@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@shared-components';
 import { Metadata } from 'next';
 import './styles.sass';
 import Link from 'next/link';
@@ -10,7 +9,7 @@ import { BlogSideBar } from '../_components';
 
 export const metadata: Metadata = {
     title: 'Blog'
-}
+};
 export default function BlogPage() {
     return (
         <section>
@@ -41,6 +40,6 @@ export default function BlogPage() {
 
             </div>
         </section>
-    )
-}
+    );
+};
 

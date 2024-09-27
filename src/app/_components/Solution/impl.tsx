@@ -13,7 +13,7 @@ export function Solution() {
         <section className='solution'>
             <div className='bg-1 bg-loaded'></div>
             <div className='bg-2 bg-loaded'>
-                <div className='solution-board container'>
+                <div className='solution-board'>
                     <h2>{solutionData.heading}</h2>
                     <h3>{solutionData.subheading}</h3>
                     <div className='solution-list'>

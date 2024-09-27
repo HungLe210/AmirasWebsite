@@ -1,6 +1,6 @@
-import React from 'react'
-import './styles.sass'
-import { BannerProps } from './types'
+import React from 'react';
+import './styles.sass';
+import { BannerProps } from './types';
 
 export function SmallBanner({ title, subTitle, content }: BannerProps) {
     return (
@@ -11,5 +11,5 @@ export function SmallBanner({ title, subTitle, content }: BannerProps) {
                 {content && <p>{content}</p>}
             </div>
         </div>
-    )
-}
+    );
+};

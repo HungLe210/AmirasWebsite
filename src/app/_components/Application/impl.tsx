@@ -1,8 +1,7 @@
-'use client'
-import { useEffect, useRef, useCallback, useState } from 'react';
+'use client';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 import { Button } from '@shared-components';
 import Link from 'next/link';
-import React from 'react';
 import Image from 'next/image';
 import './styles.sass';
 
@@ -29,7 +28,9 @@ export function Application() {
         }, { threshold: 0.1 });
 
         appCardRefs.current.forEach((card) => {
-            if (card) observer.observe(card);
+            if (card) {
+                observer.observe(card);
+            }
         });
 
         return () => {
@@ -53,7 +54,7 @@ export function Application() {
                         <div
                             key={index}
                             ref={(el) => setRef(el, index)}
-                            className={`app-card col-inner hidden ${renderedCards.includes(index) ? 'fade-in' : ''}`}
+                            className={`app-card hidden ${renderedCards.includes(index) ? 'fade-in' : ''}`}
                         >
                             <Image src={item.src} width={90} height={90} alt='' />
                             <p>{item.text}</p>

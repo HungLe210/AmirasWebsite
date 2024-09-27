@@ -1,9 +1,6 @@
-import { Button } from '@shared-components'
-import Link from 'next/link'
-import React from 'react'
-import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 import './styles.sass';
-import { solutionData as mockData } from 'constants/mockData';
 export function Newspaper() {
     //const [solutionData, setSolutionData] = useState(mockData);
     // const solutionData = mockData;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './styles.sass';
 import { Button } from '@shared-components';
 import { Metadata } from 'next';
@@ -8,7 +8,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 export const metadata: Metadata = {
     title: 'Về Smart Loyalty'
-}
+};
 export default function page() {
     return (
         <section className='about'>
@@ -33,6 +33,6 @@ export default function page() {
             </div>
         </section>
 
-    )
-}
+    );
+};
 

@@ -1,6 +1,6 @@
-'use client'
+'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import { FaGraduationCap, FaChalkboardTeacher, FaUserTie, FaWindowRestore, FaUserShield } from "react-icons/fa";
+import { FaGraduationCap, FaChalkboardTeacher, FaUserTie, FaWindowRestore, FaUserShield } from 'react-icons/fa';
 import { FaListCheck } from 'react-icons/fa6';
 import './styles.sass';
 

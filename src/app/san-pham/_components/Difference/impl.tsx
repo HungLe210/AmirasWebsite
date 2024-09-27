@@ -1,7 +1,5 @@
-'use client'
-import { Button } from '@shared-components'
-import Link from 'next/link'
-import React from 'react'
+'use client';
+import React from 'react';
 import Image from 'next/image';
 import './styles.sass';
 import { useInView } from '@hooks/useInView';
@@ -92,4 +90,4 @@ export function Difference() {
             </div>
         </section>
     );
-}
+};
