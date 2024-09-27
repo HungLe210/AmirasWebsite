@@ -40,7 +40,7 @@ export function Navbar() {
                 }}>
                     <IoIosMenu size={30} />
                 </div>
-                <ul className={`navbar-items ${isMenuOpen ? 'open' : ''}`}>
+                <ul className={`navbar-item-list ${isMenuOpen ? 'open' : ''}`}>
                     {navbarData.map((item, index) => (
                         <li key={index}>
                             <Link href={item.href} className='navbar-item'>

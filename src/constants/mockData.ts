@@ -68,18 +68,18 @@ export const navbarData = [
 		label: 'Về chúng tôi',
 		href: '/ve-smart-loyalty',
 		submenu: [
-			{ label: 'Sản phẩm 1', href: '/san-pham-1' },
-			{ label: 'Sản phẩm 2', href: '/san-pham-2' },
+			// { label: 'Sản phẩm 1', href: '/san-pham-1' },
+			// { label: 'Sản phẩm 2', href: '/san-pham-2' },
 		],
 	},
 	{
 		label: 'Blog',
 		href: '/blog',
 		submenu: [
-			{ label: 'Blog', href: '/blog' },
-			{ label: 'E-book', href: '/ebook-tai-lieu' },
-			{ label: 'Sự kiện', href: '/su-kien' },
-			{ label: 'Video & Podcast', href: '/video-podcast' },
+			// { label: 'Blog', href: '/blog' },
+			// { label: 'E-book', href: '/ebook-tai-lieu' },
+			// { label: 'Sự kiện', href: '/su-kien' },
+			// { label: 'Video & Podcast', href: '/video-podcast' },
 		],
 	},
 	{
