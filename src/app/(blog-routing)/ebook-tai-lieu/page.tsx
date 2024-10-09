@@ -20,18 +20,30 @@ export default function BlogPage() {
                         <BlogSideBar />
 
                         <div className='blog-posts'>
-                            <BlogCard category="Thể loại 1"
-                                title="Tiêu đề chính"
-                                content="Đây là một đoạn mô tả ngắn gọn về nội dung của card này." />
-                            <BlogCard category="Thể loại 1"
-                                title="Tiêu đề chính"
-                                content="Đây là một đoạn mô tả ngắn gọn về nội dung của card này." />
-                            <BlogCard category="Thể loại 1"
-                                title="Tiêu đề chính"
-                                content="Đây là một đoạn mô tả ngắn gọn về nội dung của card này." />
-                            <BlogCard category="Thể loại 1"
-                                title="Tiêu đề chính"
-                                content="Đây là một đoạn mô tả ngắn gọn về nội dung của card này." />
+                            <BlogCard item={{
+                                img: '',
+                                category: "Thể loại 1",
+                                title: "Tiêu đề chính",
+                                content: "Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
+                            }} />
+                            <BlogCard item={{
+                                img: '',
+                                category: "Thể loại 1",
+                                title: "Tiêu đề chính",
+                                content: "Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
+                            }} />
+                            <BlogCard item={{
+                                img: '',
+                                category: "Thể loại 1",
+                                title: "Tiêu đề chính",
+                                content: "Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
+                            }} />
+                            <BlogCard item={{
+                                img: '',
+                                category: "Thể loại 1",
+                                title: "Tiêu đề chính",
+                                content: "Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
+                            }} />
                         </div>
 
 
