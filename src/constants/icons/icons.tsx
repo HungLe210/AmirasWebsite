@@ -1,5 +1,5 @@
 // src/icons/index.tsx
-import { FaRegCheckCircle } from "react-icons/fa";
+import { FaRegCheckCircle } from 'react-icons/fa';
 
 import '@styles/color.sass';
 

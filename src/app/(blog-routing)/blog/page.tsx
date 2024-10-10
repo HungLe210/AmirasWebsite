@@ -41,14 +41,12 @@ export default function BlogPage() {
                         <BlogSideBar />
 
                         <div className="blog-posts">
-                            {blogCards.map((card, index) => {
-                                return (
-                                    <BlogCard
-                                        key={index}
-                                        item={card}
-                                    />
-                                );
-                            })}
+                            {blogCards.map((card, index) =>
+                                <BlogCard
+                                    key={index}
+                                    item={card}
+                                />
+                            )}
 
 
                         </div>

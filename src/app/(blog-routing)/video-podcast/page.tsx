@@ -7,5 +7,5 @@ export default function page() {
             <div>page</div>
         </section>
 
-    )
+    );
 };

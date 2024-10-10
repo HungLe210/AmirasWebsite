@@ -90,56 +90,50 @@ const BannerData = {
 		'Cung cấp giải pháp chương trình Loyalty toàn diện để hỗ trợ doanh nghiệp hoàn thành các mục tiêu về doanh thu, truyền thông và trải nghiệm khách hàng.',
 };
 
-const page = () => {
-	return (
-		<section className="service">
-			<SmallBanner title={BannerData.title} content={BannerData.content} />
-			<section>
-				<div className="container">
-					{data.map((item, index) => {
-						return (
-							<div key={index}>
-								<div className="service-category" key={index}>
-									<p>Dịch vụ</p>
-									<div className="service-category-content">
-										<Link href={item.category.url}>
-											<h2>{item.category.name}</h2>
-										</Link>
-										<Button>
-											<span>xem tất cả</span>
-											<Image
-												className="icon"
-												color="white"
-												src={'/assets/next-white.png'}
-												height={8}
-												width={8}
-												alt=""
-											/>
-										</Button>
-									</div>
-								</div>
-
-								{
-									<div className="service-card-list">
-										{item.items.map((service, index) => {
-											return <ServiceCard key={index} item={service}></ServiceCard>;
-										})}
-									</div>
-								}
+const page = () =>
+	<section className='service'>
+		<SmallBanner title={BannerData.title} content={BannerData.content} />
+		<section>
+			<div className='container'>
+				{data.map((item, index) =>
+					<div key={index}>
+						<div className='service-category' key={index}>
+							<p>Dịch vụ</p>
+							<div className='service-category-content'>
+								<Link href={item.category.url}>
+									<h2>{item.category.name}</h2>
+								</Link>
+								<Button>
+									<span>xem tất cả</span>
+									<Image
+										className='icon'
+										color='white'
+										src={'/assets/next-white.png'}
+										height={8}
+										width={8}
+										alt=''
+									/>
+								</Button>
 							</div>
-						);
-					})}
+						</div>
 
-					{/* <ServiceCard
+						{
+							<div className='service-card-list'>
+								{item.items.map((service, index) => <ServiceCard key={index} item={service}></ServiceCard>)}
+							</div>
+						}
+					</div>
+				)}
+
+				{/* <ServiceCard
 						category={data.category}
 						detailUrl={data.detailUrl}
 						img={data.img}
 						title={data.title}
 					></ServiceCard> */}
-				</div>
-			</section>
+			</div>
 		</section>
-	);
-};
+	</section>;
+
 
 export default page;

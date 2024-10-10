@@ -14,11 +14,11 @@ import { BlogCard, Carousel, CustomerCard } from '@shared-components';
 import { CardProps } from '@shared-components/Card/BlogCard/types';
 
 
-let cardButton = 'đọc thêm';
-let cardDescription =
+const cardButton = 'đọc thêm';
+const cardDescription =
 	'Cung cấp sản phẩm cho vay tiêu dùng đa dạng như xe máy, ô tô, xe tải nhẹ, xe điện,hàng điện máy, điện thoại,...';
-let cardImage = '/assets/Home/hd-sai-gon-jpg.webp';
-let cardTitle = 'HD SAIGON';
+const cardImage = '/assets/Home/hd-sai-gon-jpg.webp';
+const cardTitle = 'HD SAIGON';
 
 const customerCards: CustomerCardType[] = [
 	{
@@ -73,7 +73,7 @@ const blogCards: CardProps[] = [
 	// 	content:'Tiêu đề chính',
 	// 	title:'Đây là một đoạn mô tả ngắn gọn về nội dung của card này.'
 	// }
-]
+];
 
 export default function HomePage() {
 	return (

@@ -1,19 +1,19 @@
 'use client';
-import React, { useRef } from 'react';
+import React from 'react';
 import './styles.sass';
 export function UsefulBlog() {
-    const scrollRef = useRef<HTMLDivElement | null>(null); // Khai báo kiểu cho scrollRef
-    const scrollLeft = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-        }
-    };
+    // const scrollRef = useRef<HTMLDivElement | null>(null); // Khai báo kiểu cho scrollRef
+    // const scrollLeft = () => {
+    //     if (scrollRef.current) {
+    //         scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    //     }
+    // };
 
-    const scrollRight = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-        }
-    };
+    // const scrollRight = () => {
+    //     if (scrollRef.current) {
+    //         scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    //     }
+    // };
 
     return (
         <h1></h1>

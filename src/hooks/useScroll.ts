@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 export function useScroll(
     threshold: number,
-    key: string
 ) {
     const [attribute, setAttribute] = useState(false);
     useEffect(() => {
@@ -12,8 +11,7 @@ export function useScroll(
             if (scrollY > threshold && !attribute) {
                 setAttribute(true);
             }
-            else if (scrollY < threshold && attribute)
-                setAttribute(false);
+            else if (scrollY < threshold && attribute) { setAttribute(false); }
         };
 
         window.addEventListener('scroll', handleScroll);

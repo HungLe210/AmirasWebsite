@@ -37,6 +37,6 @@ export default function page() {
             />
             <Newspaper />
         </section>
-    )
+    );
 };
 

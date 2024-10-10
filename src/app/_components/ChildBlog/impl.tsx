@@ -8,5 +8,5 @@ export function ChildBlog() {
         <section className='childblog'>
             <Carousel uniqueID='event' shape='circle' items={[]} ItemComponent={CustomerCard} isButton={false} />
         </section>
-    )
+    );
 };

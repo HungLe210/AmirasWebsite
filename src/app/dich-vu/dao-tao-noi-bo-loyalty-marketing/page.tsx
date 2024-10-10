@@ -28,9 +28,8 @@ const page = () => {
 			<section>
 				<div className="container">
 					<div className="service-card-list">
-						{data.map((item, index) => {
-							return <ServiceCard key={index} item={item}></ServiceCard>;
-						})}
+						{data.map((item, index) => <ServiceCard key={index} item={item} />
+						)}
 					</div>
 				</div>
 			</section>

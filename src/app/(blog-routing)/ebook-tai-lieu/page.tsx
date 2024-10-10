@@ -22,27 +22,27 @@ export default function BlogPage() {
                         <div className='blog-posts'>
                             <BlogCard item={{
                                 img: '',
-                                category: "Thể loại 1",
-                                title: "Tiêu đề chính",
-                                content: "Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
+                                category: 'Thể loại 1',
+                                title: 'Tiêu đề chính',
+                                content: 'Đây là một đoạn mô tả ngắn gọn về nội dung của card này.'
                             }} />
                             <BlogCard item={{
                                 img: '',
-                                category: "Thể loại 1",
-                                title: "Tiêu đề chính",
-                                content: "Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
+                                category: 'Thể loại 1',
+                                title: 'Tiêu đề chính',
+                                content: 'Đây là một đoạn mô tả ngắn gọn về nội dung của card này.'
                             }} />
                             <BlogCard item={{
                                 img: '',
-                                category: "Thể loại 1",
-                                title: "Tiêu đề chính",
-                                content: "Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
+                                category: 'Thể loại 1',
+                                title: 'Tiêu đề chính',
+                                content: 'Đây là một đoạn mô tả ngắn gọn về nội dung của card này.'
                             }} />
                             <BlogCard item={{
                                 img: '',
-                                category: "Thể loại 1",
-                                title: "Tiêu đề chính",
-                                content: "Đây là một đoạn mô tả ngắn gọn về nội dung của card này."
+                                category: 'Thể loại 1',
+                                title: 'Tiêu đề chính',
+                                content: 'Đây là một đoạn mô tả ngắn gọn về nội dung của card này.'
                             }} />
                         </div>
 
@@ -52,6 +52,6 @@ export default function BlogPage() {
 
             </div>
         </section>
-    )
+    );
 };
 

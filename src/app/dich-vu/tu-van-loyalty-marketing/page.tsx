@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.sass';
-import { ServiceCard, ServiceCardItem, ServiceCardType } from '@shared-components/Card';
+import { ServiceCard, ServiceCardItem } from '@shared-components/Card';
 import { Metadata } from 'next';
 import { SmallBanner } from '@shared-components/Banner/SmallBanner';
 
@@ -34,12 +34,12 @@ const page = () => {
 			<section>
 				<div className="container">
 					<div className="service-card-list">
-						{data.map((item, index) => {
-							return <ServiceCard key={index} item={item}></ServiceCard>;
-						})}
+						{data.map((item, index) => <ServiceCard key={index} item={item} />)}
 					</div>
 				</div>
 			</section>
 		</section>
 	);
 };
+
+export default page;

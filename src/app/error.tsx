@@ -19,5 +19,7 @@ export default function ErrorPage({
 				Try again
 			</button>
 		</div>
+
 	);
 }
+

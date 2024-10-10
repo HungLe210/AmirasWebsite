@@ -28,15 +28,15 @@ export default function page() {
             <Foundation />
             <Difference />
             <Carousel
-                uniqueID="customer"
+                uniqueID='customer'
                 items={customerCards}
                 ItemComponent={CustomerCard}
-                shape="retangle"
-                title="KHÁCH HÀNG CỦA CHÚNG TÔI"
+                shape='retangle'
+                title='KHÁCH HÀNG CỦA CHÚNG TÔI'
                 isButton={false}
             />
             <Carousel uniqueID={''} items={[]} ItemComponent={CustomerCard} shape={'circle'} isButton={false} />
             <Newspaper />
         </section>
-    )
+    );
 };

@@ -22,8 +22,8 @@ export function Product() {
             <Advertise />
             <Foundation />
             <Difference />
-            <Carousel uniqueID={''} items={[]} ItemComponent={CustomerCard} shape={''} />
+            <Carousel uniqueID={''} items={[]} ItemComponent={CustomerCard} shape={'circle'} isButton={false} />
             <Newspaper />
         </section>
-    )
+    );
 };

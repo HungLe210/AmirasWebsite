@@ -58,16 +58,14 @@ export function NewEvent() {
             <div className='new-event-board'>
                 <h2>SỰ KIỆN MỚI NHẤT</h2>
                 <div className='new-event-list'>
-                    {data.map((item, index) => {
-                        return (
-                            <ServiceCard
-                                key={index}
-                                item={item}
-                                ref={(el) => setRef(el, index)}
-                                className={`service-card ${renderedCards.includes(index) ? 'fade-in' : ''}`}
-                            />
-                        );
-                    })}
+                    {data.map((item, index) =>
+                        <ServiceCard
+                            key={index}
+                            item={item}
+                            ref={(el) => setRef(el, index)}
+                            className={`service-card ${renderedCards.includes(index) ? 'fade-in' : ''}`}
+                        />
+                    )}
                 </div>
             </div>
 

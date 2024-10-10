@@ -22,14 +22,12 @@ const page = () => {
 	];
 	return (
 		<section className="service-section">
-			<SmallBanner title='Đào tạo Public Loyalty Marketing'/>
-			
+			<SmallBanner title='Đào tạo Public Loyalty Marketing' />
+
 			<section>
 				<div className="container">
 					<div className="service-card-list">
-						{data.map((item, index) => {
-							return <ServiceCard key={index} item={item}></ServiceCard>;
-						})}
+						{data.map((item, index) => <ServiceCard key={index} item={item} />)}
 					</div>
 				</div>
 			</section>
