@@ -1,10 +1,10 @@
-import { RestApiClientDataTransformers, RestApiClientOpts } from '@utils';
+// import { RestApiClientDataTransformers, RestApiClientOpts } from '@utils';
 
-export type baseApiCallerOpts = {
-	restApiClientOpts: RestApiClientOpts;
-};
+// export type baseApiCallerOpts = {
+// 	restApiClientOpts: RestApiClientOpts;
+// };
 
-export type baseApiCallerEndpointDef = {
-	endpoint: string;
-	dataTransformers: RestApiClientDataTransformers;
-};
+// export type baseApiCallerEndpointDef = {
+// 	endpoint: string;
+// 	dataTransformers: RestApiClientDataTransformers;
+// };

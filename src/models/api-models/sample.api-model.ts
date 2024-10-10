@@ -1,7 +1,7 @@
-import { Exclude } from 'class-transformer';
+// import { Exclude } from 'class-transformer';
 
-@Exclude()
-export class AMSample {
+// @Exclude()
+// export class AMSample {
 
-	name?: string;
-}
+// 	name?: string;
+// }
