@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 export function useScroll(
     threshold: number,
+    key?: string
 ) {
     const [attribute, setAttribute] = useState(false);
     useEffect(() => {
